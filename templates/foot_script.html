@@ -1,0 +1,353 @@
+<!-- Mainly scripts -->
+<script src="/static/js/jquery-2.1.1.js"></script>
+<script src="/static/js/bootstrap.min.js"></script>
+
+
+<script src="/static/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+<script src="/static/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+<script src="/static/js/plugins/jeditable/jquery.jeditable.js"></script>
+<!-- Custom and plugin javascript -->
+<script src="/static/js/inspinia.js"></script>
+<script src="/static/js/plugins/pace/pace.min.js"></script>
+<script src="/static/js/plugins/dataTables/datatables.min.js"></script>
+
+<!-- Custom and plugin javascript -->
+<script src="/static/js/inspinia.js"></script>
+<!-- iCheck -->
+<script src="/static/js/plugins/iCheck/icheck.min.js"></script>
+{#<script src="/static/js/echarts.min.js"></script>#}
+
+
+<script>
+    $(document).ready(function () {
+        $('.i-checks').iCheck({
+            checkboxClass: 'icheckbox_square-green',
+            radioClass: 'iradio_square-green',
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function () {
+        $("#gaoji").hide();
+        $("#ji").click(function () {
+            $("#jiben").show();
+            $("#gaoji").hide();
+        });
+        $("#gao").click(function () {
+            $("#jiben").hide();
+            $("#gaoji").show();
+        });
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        $("#toubu").click(function () {
+            $("body").toggleClass("mini-navbar");
+            SmoothlyMenu();
+        });
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        $(".collapse-links").click(function () {
+            var ibox = $(this).closest('div.ibox');
+            var button = $(this).find('i');
+            var content = ibox.find('div.ibox-content');
+            content.slideToggle(200);
+            button.toggleClass('fa-chevron-up').toggleClass('fa-chevron-down');
+            ibox.toggleClass('').toggleClass('border-bottom');
+            setTimeout(function () {
+                ibox.resize();
+                ibox.find('[id^=map-]').resize();
+            }, 50);
+        });
+    });
+</script>
+
+
+<script>
+
+    $(document).ready(function () {
+        $('.dataTables-example').DataTable({
+            "oLanguage": {
+                "sLengthMenu": "每页显示 _MENU_ 条记录",
+                "sZeroRecords": "对不起，查询不到任何相关数据",
+                "sInfo": "当前显示 _START_ 到 _END_ 条，共 _TOTAL_条记录",
+                "sInfoEmtpy": "找不到相关数据",
+                "sInfoFiltered": " 数据表中共为 _MAX_ 条记录",
+                "sProcessing": "正在加载中...",
+                "sSearch": "搜索",
+                "oPaginate": {
+                    "sFirst": "第一页",
+                    "sPrevious": " 上一页 ",
+                    "sNext": " 下一页 ",
+                    "sLast": " 最后一页 "
+                }
+            },
+
+            dom: '<"html5buttons"B>lTfgitp',
+            buttons: [
+                {extend: 'copy'},
+                {extend: 'csv'},
+                {extend: 'excel', title: 'ExampleFile'},
+                {extend: 'pdf', title: 'ExampleFile'},
+
+                {
+                    extend: 'print',
+                    customize: function (win) {
+                        $(win.document.body).addClass('white-bg');
+                        $(win.document.body).css('font-size', '10px');
+
+                        $(win.document.body).find('table')
+                                .addClass('compact')
+                                .css('font-size', 'inherit');
+                    }
+                }
+            ]
+
+        });
+
+    });
+
+
+</script>
+
+
+<script type="text/JavaScript">
+    $.ajaxSetup({headers: {"X-CSRFToken": '{{ csrf_token }}'}});
+</script>
+
+<script type="text/JavaScript">
+    $(function () {
+        $('#host_add').click(function () {
+            $.ajax({
+                url: "/host/hostadd",
+                type: 'POST',
+                {#                 data:{'hostname':$('#host').val(),  'ip':$('#ip').val(),  'osversion':$('#osversion').val(), 'memory':$('#memory').val(), 'disk':$('#disk').val(),'jifang_id':$('#jifang1').val()},#}
+                data: $('#add_form').serialize(),
+                success: function (data) {
+                    var obj = JSON.parse(data);
+                    if (obj.status) {
+                        location.reload()
+                    } else {
+                        $('#error').text(obj.error);
+                    }
+                }
+
+            })
+        })
+
+        $('.host_change').click(function () {
+
+            var id = $(this).parent().parent().attr('nid');
+            $.ajax({
+                url: "/host/hostpassword",
+                type: 'POST',
+                data: {'id': id,},
+                success: function (ret) {
+                    $('#edit_form').find('input[name="password"]').val(ret);
+                }
+            })
+
+
+            var jifang_id = $(this).parent().parent().attr('jifang_id');
+            var port = $(this).parent().parent().attr('port');
+            var hostname = $(this).parent().parent().attr('hostname');
+            var ip = $(this).parent().parent().attr('ip');
+            {#                var password = $(this).parent().parent().attr('password');#}
+            var osversion = $(this).parent().parent().attr('osversion');
+            var memory = $(this).parent().parent().attr('memory');
+            var disk = $(this).parent().parent().attr('disk');
+            var username = $(this).parent().parent().attr('username');
+            var sn = $(this).parent().parent().attr('sn');
+            var beizhu = $(this).parent().parent().attr('beizhu');
+            var cpu_core = $(this).parent().parent().attr('cpu_core');
+            var model_name = $(this).parent().parent().attr('model_name');
+
+
+            $('#edit_form').find('input[name="id"]').val(id);
+            $('#edit_form').find('select').val(jifang_id);
+            $('#edit_form').find('input[name="port"]').val(port);
+            $('#edit_form').find('input[name="hostname"]').val(hostname);
+            $('#edit_form').find('input[name="ip"]').val(ip);
+            $('#edit_form').find('input[name="osversion"]').val(osversion);
+            $('#edit_form').find('input[name="memory"]').val(memory);
+            $('#edit_form').find('input[name="disk"]').val(disk);
+            $('#edit_form').find('input[name="username"]').val(username);
+            $('#edit_form').find('input[name="sn"]').val(sn);
+            $('#edit_form').find('input[name="beizhu"]').val(beizhu);
+            $('#edit_form').find('input[name="cpu_core"]').val(cpu_core);
+            $('#edit_form').find('input[name="model_name"]').val(model_name);
+
+        })
+
+        $('.host_see').click(function () {
+
+            var jifang_id = $(this).parent().parent().attr('jifang_id');
+            var port = $(this).parent().parent().attr('port');
+            var hostname = $(this).parent().parent().attr('hostname');
+            var ip = $(this).parent().parent().attr('ip');
+            var osversion = $(this).parent().parent().attr('osversion');
+            var memory = $(this).parent().parent().attr('memory');
+            var disk = $(this).parent().parent().attr('disk');
+            var username = $(this).parent().parent().attr('username');
+            var sn = $(this).parent().parent().attr('sn');
+            var beizhu = $(this).parent().parent().attr('beizhu');
+            var cpu_core = $(this).parent().parent().attr('cpu_core');
+            var model_name = $(this).parent().parent().attr('model_name');
+
+
+            $('#see_form').find('select').val(jifang_id);
+            $('#see_form').find('input[name="port"]').val(port);
+            $('#see_form').find('input[name="hostname"]').val(hostname);
+            $('#see_form').find('input[name="ip"]').val(ip);
+            $('#see_form').find('input[name="osversion"]').val(osversion);
+            $('#see_form').find('input[name="memory"]').val(memory);
+            $('#see_form').find('input[name="disk"]').val(disk);
+            $('#see_form').find('input[name="username"]').val(username);
+            $('#see_form').find('input[name="sn"]').val(sn);
+            $('#see_form').find('input[name="beizhu"]').val(beizhu);
+            $('#see_form').find('input[name="cpu_core"]').val(cpu_core);
+            $('#see_form').find('input[name="model_name"]').val(model_name);
+
+
+        })
+
+        $('#host_change').click(function () {
+            $.ajax({
+                url: "/host/hostchange",
+                type: 'POST',
+                data: $('#edit_form').serialize(),
+                success: function (data) {
+                    var obj = JSON.parse(data);
+                    if (obj.status) {
+                        location.reload()
+                    } else {
+                        $('#error1').text(obj.error);
+                    }
+                }
+
+            })
+        })
+
+
+        $('.host_del').click(function () {
+            var id = $(this).parent().parent().attr('nid');
+            var hostname = $(this).parent().parent().attr('hostname');
+            $('#del_form').find('input[name="id"]').val(id);
+            $('#del_form').find('input[name="hostname"]').val(hostname);
+        })
+
+
+        $('#host_del').click(function () {
+            $.ajax({
+                url: "/host/hostdel",
+                type: 'POST',
+                data: $('#del_form').serialize(),
+                success: function (data) {
+                    var obj = JSON.parse(data);
+                    if (obj.status) {
+                        location.reload()
+                    } else {
+                        $('#error2').text(obj.error);
+                    }
+                }
+
+            })
+        })
+        $('.host_update').click(function () {
+            var id = $(this).parent().parent().attr('nid');
+            $.ajax({
+                url: "/host/hostupdate",
+                type: 'POST',
+                data: {'id': id,},
+                success: function (data) {
+                    var obj = JSON.parse(data);
+                    if (obj.status) {
+                        location.reload()
+                    } else {
+                        $('#update_error').text(obj.error);
+                    }
+                }
+
+            })
+        })
+
+
+    });
+</script>
+<script>
+
+    $(function () {
+        $('#cmd').click(function () {
+            $.ajax({
+                url: "/host/cmd.html",
+                type: 'POST',
+                data: $('#cmd_from').serialize(),
+                success: function (data) {
+                    var obj = JSON.parse(data);
+                    {#                  var  obj1 = obj.data.replace(/\n/g,"<br>");#}
+                    $('#ret').text(obj.data)
+
+                }
+
+            })
+        })
+
+
+        $('#yml').click(function () {
+            $.ajax({
+                url: "/host/yml.html",
+                type: 'POST',
+                data: $('#yml_from').serialize(),
+                success: function (data) {
+                    var obj = JSON.parse(data);
+                    {#                  var  obj1 = obj.data.replace(/\n/g,"<br>");#}
+                    $('#yml_result').text(obj.data)
+
+                }
+
+            })
+        })
+
+
+    });
+
+    function clearBody() {
+        location.reload()
+    }
+
+</script>
+
+<script>
+    $(function () {
+
+        var myChart = echarts.init(document.getElementById('echarts-line'));
+
+        // 绘制图表
+
+        myChart.setOption({
+            title: {text: '机柜总数'},
+            tooltip: {},
+            xAxis: {
+                data:{{ name | safe }}
+
+            },
+            yAxis: {},
+
+            series: [{
+                name: '销量',
+                type: 'bar',
+                data: {{ jq | safe }}
+            }]
+        });
+
+
+        window.onresize = function () {
+            myChart.resize();
+        }
+
+    });
+
+</script>

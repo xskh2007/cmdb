@@ -1,0 +1,122 @@
+{% extends "base.html" %}
+
+{% block mainbody %}
+    <div class="row wrapper border-bottom white-bg page-heading">
+        <div class="col-lg-10">
+            <h2>命令行</h2>
+            <ol class="breadcrumb">
+                <li>
+                    <a href="../index.html">首页</a>
+                </li>
+                <li>
+                    <a>添加</a>
+                </li>
+                <li class="active">
+                    <strong>机柜</strong>
+                </li>
+            </ol>
+        </div>
+        <div class="col-lg-2">
+
+        </div>
+    </div>
+
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+
+
+            <div class="col-sm-6">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                       <h5>命令行
+                        </h5>
+              <div class="ibox-tools">
+                                <a class="collapse-links">
+                                    <i class="fa fa-chevron-up"></i>
+                                </a>
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                    <i class="fa fa-wrench"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-user">
+                                    <li><a href="#">配置选项 1</a>
+                                    </li>
+                                    <li><a href="#">配置选项 2</a>
+                                    </li>
+                                </ul>
+                                <a class="close-link">
+                                    <i class="fa fa-times"></i>
+                                </a>
+                            </div>
+                    </div>
+                    <div class="ibox-content">
+                      <form   class="form-horizontal"  id="cmd_from">
+
+
+
+                                  <div class="form-group"><label class="col-sm-2 control-label">主机</label>
+
+                                    <div class="col-sm-8"><select class="form-control m-b" name="id">
+                                          {% for row in host_list %}
+                                        <option  value="{{ row.id }}"> {{ row.ip }}</option>
+                                              {% endfor %}
+
+                                     </select>
+
+
+                                    </div>
+                                </div>
+
+
+ <div class="form-group"><label class="col-sm-2 control-label">命令</label>
+
+                                <div class="col-lg-8 col-sm-9"><input type="text" class="form-control"  placeholder="命令"  name="cmd"   required="" ><span class="help-block m-b-none"></span>
+                                </div>
+                            </div>
+
+        <div class="hr-line-dashed"></div>
+
+                            <div class="form-group">
+                                <div class="col-sm-4 col-sm-offset-3">
+
+                                    <a  id="cmd" class="btn btn-primary" type="submit">提交</a>
+                                    <button class="btn btn-white" type="button"   onclick='clearBody()'  >取消</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+               <div class="col-sm-6">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                       <h5>输出结果
+                        </h5>
+              <div class="ibox-tools">
+                                <a class="collapse-links">
+                                    <i class="fa fa-chevron-up"></i>
+                                </a>
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                    <i class="fa fa-wrench"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-user">
+                                    <li><a href="#">配置选项 1</a>
+                                    </li>
+                                    <li><a href="#">配置选项 2</a>
+                                    </li>
+                                </ul>
+                                <a class="close-link">
+                                    <i class="fa fa-times"></i>
+                                </a>
+                            </div>
+                    </div>
+                    <div class="ibox-content">
+
+                    <pre class="hljs">   <span id="ret"></span></pre>
+
+{#                   {{ ret |linebreaksbr  }}    {{ err |linebreaksbr  }}#}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
