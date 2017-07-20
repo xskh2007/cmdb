@@ -19,7 +19,7 @@ class Host(models.Model):
     sn = models.CharField(max_length=50, verbose_name='SN', null=True)
     model_name = models.CharField(max_length=50, verbose_name='型号', null=True)
     cpu_core = models.CharField(max_length=50, verbose_name='CPU', null=True)
-    beizhu = models.CharField(max_length=1000, verbose_name='CPU', null=True)
+    beizhu = models.CharField(max_length=1000, verbose_name='备注', null=True)
 
 
     class  Meta:

@@ -141,8 +141,9 @@ SUIT_CONFIG = {  # suit页面配置
     'LIST_PER_PAGE': 20,
     'MENU': (
         'sites',
-        {'app': 'index', 'label': u'登陆帐户'},
+        {'app': 'index', 'label': u'信息'},
         {'app': 'jigui', 'label': u'机柜'},
+        {'app': 'hostinfo', 'label': u'服务器'},
         {'app': 'auth', 'label': u'系统用户'},
         # 每一个字典表示左侧菜单的一栏
         # {'label': u'SQL管理', 'app': 'web_sso', 'models': ('web_sso.Sql', 'web_sso.PreSql', 'web_sso.Direction')},  # 可以是多个字典
