@@ -487,10 +487,168 @@
     </div>
 
 
+{% endblock %}
+
+{% block js %}
+
+<script type="text/JavaScript">
+    $(function () {
+        $('#host_add').click(function () {
+            $.ajax({
+                url: "/host/hostadd",
+                type: 'POST',
+                {#                 data:{'hostname':$('#host').val(),  'ip':$('#ip').val(),  'osversion':$('#osversion').val(), 'memory':$('#memory').val(), 'disk':$('#disk').val(),'jifang_id':$('#jifang1').val()},#}
+                data: $('#add_form').serialize(),
+                success: function (data) {
+                    var obj = JSON.parse(data);
+                    if (obj.status) {
+                        location.reload()
+                    } else {
+                        $('#error').text(obj.error);
+                    }
+                }
+
+            })
+        })
+
+        $('.host_change').click(function () {
+
+            var id = $(this).parent().parent().attr('nid');
+            $.ajax({
+                url: "/host/hostpassword",
+                type: 'POST',
+                data: {'id': id,},
+                success: function (ret) {
+                    $('#edit_form').find('input[name="password"]').val(ret);
+                }
+            })
 
 
+            var jifang_id = $(this).parent().parent().attr('jifang_id');
+            var port = $(this).parent().parent().attr('port');
+            var hostname = $(this).parent().parent().attr('hostname');
+            var ip = $(this).parent().parent().attr('ip');
+            {#                var password = $(this).parent().parent().attr('password');#}
+            var osversion = $(this).parent().parent().attr('osversion');
+            var memory = $(this).parent().parent().attr('memory');
+            var disk = $(this).parent().parent().attr('disk');
+            var username = $(this).parent().parent().attr('username');
+            var sn = $(this).parent().parent().attr('sn');
+            var beizhu = $(this).parent().parent().attr('beizhu');
+            var cpu_core = $(this).parent().parent().attr('cpu_core');
+            var model_name = $(this).parent().parent().attr('model_name');
 
 
+            $('#edit_form').find('input[name="id"]').val(id);
+            $('#edit_form').find('select').val(jifang_id);
+            $('#edit_form').find('input[name="port"]').val(port);
+            $('#edit_form').find('input[name="hostname"]').val(hostname);
+            $('#edit_form').find('input[name="ip"]').val(ip);
+            $('#edit_form').find('input[name="osversion"]').val(osversion);
+            $('#edit_form').find('input[name="memory"]').val(memory);
+            $('#edit_form').find('input[name="disk"]').val(disk);
+            $('#edit_form').find('input[name="username"]').val(username);
+            $('#edit_form').find('input[name="sn"]').val(sn);
+            $('#edit_form').find('input[name="beizhu"]').val(beizhu);
+            $('#edit_form').find('input[name="cpu_core"]').val(cpu_core);
+            $('#edit_form').find('input[name="model_name"]').val(model_name);
 
+        })
+
+        $('.host_see').click(function () {
+
+            var jifang_id = $(this).parent().parent().attr('jifang_id');
+            var port = $(this).parent().parent().attr('port');
+            var hostname = $(this).parent().parent().attr('hostname');
+            var ip = $(this).parent().parent().attr('ip');
+            var osversion = $(this).parent().parent().attr('osversion');
+            var memory = $(this).parent().parent().attr('memory');
+            var disk = $(this).parent().parent().attr('disk');
+            var username = $(this).parent().parent().attr('username');
+            var sn = $(this).parent().parent().attr('sn');
+            var beizhu = $(this).parent().parent().attr('beizhu');
+            var cpu_core = $(this).parent().parent().attr('cpu_core');
+            var model_name = $(this).parent().parent().attr('model_name');
+
+
+            $('#see_form').find('select').val(jifang_id);
+            $('#see_form').find('input[name="port"]').val(port);
+            $('#see_form').find('input[name="hostname"]').val(hostname);
+            $('#see_form').find('input[name="ip"]').val(ip);
+            $('#see_form').find('input[name="osversion"]').val(osversion);
+            $('#see_form').find('input[name="memory"]').val(memory);
+            $('#see_form').find('input[name="disk"]').val(disk);
+            $('#see_form').find('input[name="username"]').val(username);
+            $('#see_form').find('input[name="sn"]').val(sn);
+            $('#see_form').find('input[name="beizhu"]').val(beizhu);
+            $('#see_form').find('input[name="cpu_core"]').val(cpu_core);
+            $('#see_form').find('input[name="model_name"]').val(model_name);
+
+
+        })
+
+        $('#host_change').click(function () {
+            $.ajax({
+                url: "/host/hostchange",
+                type: 'POST',
+                data: $('#edit_form').serialize(),
+                success: function (data) {
+                    var obj = JSON.parse(data);
+                    if (obj.status) {
+                        location.reload()
+                    } else {
+                        $('#error1').text(obj.error);
+                    }
+                }
+
+            })
+        })
+
+
+        $('.host_del').click(function () {
+            var id = $(this).parent().parent().attr('nid');
+            var hostname = $(this).parent().parent().attr('hostname');
+            $('#del_form').find('input[name="id"]').val(id);
+            $('#del_form').find('input[name="hostname"]').val(hostname);
+        })
+
+
+        $('#host_del').click(function () {
+            $.ajax({
+                url: "/host/hostdel",
+                type: 'POST',
+                data: $('#del_form').serialize(),
+                success: function (data) {
+                    var obj = JSON.parse(data);
+                    if (obj.status) {
+                        location.reload()
+                    } else {
+                        $('#error2').text(obj.error);
+                    }
+                }
+
+            })
+        })
+        $('.host_update').click(function () {
+            var id = $(this).parent().parent().attr('nid');
+            $.ajax({
+                url: "/host/hostupdate",
+                type: 'POST',
+                data: {'id': id,},
+                success: function (data) {
+                    var obj = JSON.parse(data);
+                    if (obj.status) {
+                        location.reload()
+                    } else {
+                        $('#update_error').text(obj.error);
+                    }
+                }
+
+            })
+        })
+
+
+    });
+</script>
 
 {% endblock %}

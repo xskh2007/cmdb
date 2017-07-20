@@ -1,3 +1,4 @@
+
 {% extends "base.html" %}
 
 {% block mainbody %}
@@ -61,3 +62,41 @@
 
 
 {% endblock %}
+
+{% block  js %}
+
+    <script src="/static/js/echarts.min.js"></script>
+
+    <script>
+    $(function () {
+
+        var myChart = echarts.init(document.getElementById('echarts-line'));
+
+        // 绘制图表
+
+        myChart.setOption({
+            title: {text: '机柜总数'},
+            tooltip: {},
+            xAxis: {
+                data:{{ name | safe }}
+
+            },
+            yAxis: {},
+
+            series: [{
+                name: '总数',
+                type: 'bar',
+                data: {{ jq | safe }}
+            }]
+        });
+
+
+        window.onresize = function () {
+            myChart.resize();
+        }
+
+    });
+
+</script>
+{% endblock %}
+
