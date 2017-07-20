@@ -23,10 +23,10 @@ from jigui.views import jigui, xiangxi, add, jigui_del,jigui_edit,show
 
 
 urlpatterns = [
-    url(r'^$',jigui),
-    url(r'^jigui.html$', jigui ),
-    url(r'^show.html$', show ),
-    url(r'^xiangxi-(?P<nid>\d+).html$', xiangxi),
+    url(r'^$',jigui,name='jigui'),
+    url(r'^jigui.html$', jigui,name='jigui'),
+    url(r'^show.html$', show ,name='show'),
+    url(r'^xiangxi-(?P<nid>\d+).html$', xiangxi,name='xiangxi'),
     url(r'^add.html$', add, name='addx'),
     url(r'^jiguidel-(?P<nid>\d+).html$', jigui_del),
     url(r'^jiguiedit-(?P<nid>\d+).html$', jigui_edit),

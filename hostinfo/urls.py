@@ -16,14 +16,14 @@ Including another URLconf
 from django.conf.urls import url
 from hostinfo.views import host, cmd, host_add, host_change, host_del,yml,history,hostupdate,host_change_password
 urlpatterns = [
-    url(r'^host.html$', host),
-    url(r'^yml.html$', yml),
-    url(r'^cmd.html$', cmd),
-    url(r'^hostadd$', host_add),
-    url(r'^history.html$', history),
-    url(r'^hostpassword$', host_change_password),
-    url(r'^hostchange$', host_change),
-    url(r'^hostdel$', host_del),
-    url(r'^hostupdate$', hostupdate),
+    url(r'^host.html$', host,name="host"),
+    url(r'^yml.html$', yml,name="yml"),
+    url(r'^cmd.html$', cmd,name="cmd"),
+    url(r'^hostadd$', host_add,name="host_add"),
+    url(r'^history.html$', history,name="history"),
+    url(r'^hostpassword$', host_change_password,name="host_change_password"),
+    url(r'^hostchange$', host_change,name="host_change"),
+    url(r'^hostdel$', host_del,name='host_del'),
+    url(r'^hostupdate$', hostupdate,name="hostupdate"),
 
 ]

@@ -27,20 +27,20 @@
                 <a href="#"><i class="fa fa-th-large"></i> <span class="nav-label">机柜</span> <span
                         class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
-                    <li class="active"><a href="/jigui/jigui.html">详情</a></li>
+                    <li class="active"><a href="{%   url    'jigui'   %}">详情</a></li>
                     {% if     perms.jigui.add_jiguiinfo %}
-                        <li><a href="/jigui/add.html">添加</a></li> {% endif %}
-                    <li><a href="/jigui/show.html">展示</a></li>
+                        <li><a href="{%   url    'addx'   %}">添加</a></li> {% endif %}
+                    <li><a href="{%   url    'show'   %}">展示</a></li>
                 </ul>
             </li>
             <li class="active">
                 <a href="#"><i class="fa fa-laptop"></i> <span class="nav-label">主机</span> <span
                         class="fa arrow"></span></a>
                 <ul class="nav nav-second-level" >
-                    <li><a href="/host/host.html">详情</a></li>
-                    <li><a href="/host/yml.html">yml</a></li>
-                    <li><a href="/host/cmd.html">命令行</a></li>
-                    <li><a href="/host/history.html">历史操作</a></li>
+                    <li><a href="{% url   'host' %}">详情</a></li>
+                    <li><a href="{% url   'yml' %}">yml</a></li>
+                    <li><a href="{% url   'cmd' %}">命令行</a></li>
+                    <li><a href="{% url   'history' %}">历史操作</a></li>
                 </ul>
             </li>
 

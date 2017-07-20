@@ -5,11 +5,11 @@ from index.models import Business
 import paramiko
 from django.contrib.auth.decorators import permission_required, login_required
 
+from  hostinfo.ansible_runner.runner import PlayBookRunner
 
-# from  hostinfo.ansible_runner.runner import  PlayBookRunner
-#
-# from hostinfo.ansible_runner.callback import CommandResultCallback
-# from  hostinfo.ansible_runner.runner import AdHocRunner
+from hostinfo.ansible_runner.callback import CommandResultCallback
+from  hostinfo.ansible_runner.runner import AdHocRunner
+
 
 @login_required(login_url="/login.html")
 def host(request):  ##首页
@@ -50,9 +50,11 @@ def host_add(request):  ##添加
                 memory = '{}MB'.format(data['ansible_memtotal_mb'])
                 sn = data['ansible_product_serial']
                 model_name = data['ansible_product_name']
-                cpu_core=data['ansible_processor'][1]+ "{}核".format(data['ansible_processor_count'])
-                obj = Host.objects.create(hostname=hostname,ip=ip,port=port,username=username,password=password,jifang_id=jifang,
-                                          osversion=osversion,memory=memory,disk=disk,sn=sn,model_name=model_name,cpu_core=cpu_core)
+                cpu_core = data['ansible_processor'][1] + "{}核".format(data['ansible_processor_count'])
+                obj = Host.objects.create(hostname=hostname, ip=ip, port=port, username=username, password=password,
+                                          jifang_id=jifang,
+                                          osversion=osversion, memory=memory, disk=disk, sn=sn, model_name=model_name,
+                                          cpu_core=cpu_core)
             else:
                 ret['status'] = False
                 ret['error'] = 'IP太短了,不能为空'
@@ -98,6 +100,7 @@ def host_change(request):  ##修改
             ret['error'] = '添加请求错误'
         return HttpResponse(json.dumps(ret))
 
+
 @login_required(login_url="/login.html")
 @permission_required('hostinfo.change_host', login_url='/error.html')
 def host_change_password(request):  ##修改密码
@@ -127,7 +130,7 @@ def yml(request):  ##yml
     ret = {'status': True, 'error': None, 'data': None}
     if request.method == "GET":
         obj = Host.objects.filter(id__gt=0)
-        return render(request, 'host/yml.html', {"host_list":obj,})
+        return render(request, 'host/yml.html', {"host_list": obj, })
 
     if request.method == 'POST':
         try:
@@ -140,7 +143,6 @@ def yml(request):  ##yml
             user = request.user
 
             cmd = "yml"
-
 
             history = History.objects.create(ip=ip, root=username, port=port, cmd=cmd, user=user)
             assets = [
@@ -158,9 +160,10 @@ def yml(request):  ##yml
             b = a['plays'][0]['tasks'][0]['hosts']['host']['_ansible_verbose_override']
             ret = {"data": b, "status": True}
         except Exception as e:
-                 error = "账号或密码错误,请修改保存再执行yml"
-                 ret = {"data": error, "status": True}
+            error = "账号或密码错误,请修改保存再执行yml"
+            ret = {"data": error, "status": True}
         return HttpResponse(json.dumps(ret))
+
 
 
 
@@ -168,7 +171,7 @@ def yml(request):  ##yml
 def cmd(request):  ##命令行
     if request.method == "GET":
         obj = Host.objects.filter(id__gt=0)
-        return render(request, 'host/cmd.html',{"host_list":obj,} )
+        return render(request, 'host/cmd.html', {"host_list": obj, })
     if request.method == 'POST':
         id = request.POST.get('id', None)
         obj = Host.objects.filter(id=id).first()
@@ -177,9 +180,9 @@ def cmd(request):  ##命令行
         username = obj.username
         password = obj.password
         user = request.user
-        cmd = request.POST.get('cmd',None)
+        cmd = request.POST.get('cmd', None)
 
-        if  not cmd:
+        if not cmd:
             error1 = "请输入命令"
             ret = {"data": error1, "status": True}
             return HttpResponse(json.dumps(ret))
@@ -205,10 +208,15 @@ def cmd(request):  ##命令行
         return HttpResponse(json.dumps(ret))
 
 
+
+
 @login_required(login_url="/login.html")
 def history(request):  ##历史命令
     history = History.objects.filter(id__gt=0)
     return render(request, 'host/history.html', {"history": history, })
+
+
+
 
 @login_required(login_url="/login.html")
 @permission_required('hostinfo.change_host', login_url='/error.html')
@@ -235,22 +243,22 @@ def hostupdate(request):  ## 更新
                 },
             ]
             task_tuple = (('setup', ''),)
-            # runner = AdHocRunner(assets)
-            # result = runner.run(task_tuple=task_tuple, pattern='all', task_name='Ansible Ad-hoc')
-            # data = result['contacted']['host'][0]['ansible_facts']
-            # hostname = data['ansible_fqdn']
-            # osversion = data['ansible_distribution'] + data['ansible_distribution_version']
-            # disk = data['ansible_devices']["vda"]['size']
-            # memory = '{}MB'.format(data['ansible_memtotal_mb'])
-            # sn = data['ansible_product_serial']
-            # model_name = data['ansible_product_name']
-            # cpu_core = data['ansible_processor'][1] + "{}核".format(data['ansible_processor_count'])
-            # obj = Host.objects.filter(id=id).update(hostname=hostname, ip=ip, port=port,
-            #                           username=username, password=password,
-            #                           jifang_id=jifang,
-            #                           osversion=osversion, memory=memory,
-            #                           disk=disk, sn=sn, model_name=model_name,
-            #                           cpu_core=cpu_core, beizhu=beizhu)
+            runner = AdHocRunner(assets)
+            result = runner.run(task_tuple=task_tuple, pattern='all', task_name='Ansible Ad-hoc')
+            data = result['contacted']['host'][0]['ansible_facts']
+            hostname = data['ansible_fqdn']
+            osversion = data['ansible_distribution'] + data['ansible_distribution_version']
+            disk = data['ansible_devices']["vda"]['size']
+            memory = '{}MB'.format(data['ansible_memtotal_mb'])
+            sn = data['ansible_product_serial']
+            model_name = data['ansible_product_name']
+            cpu_core = data['ansible_processor'][1] + "{}核".format(data['ansible_processor_count'])
+            obj = Host.objects.filter(id=id).update(hostname=hostname, ip=ip, port=port,
+                                      username=username, password=password,
+                                      jifang_id=jifang,
+                                      osversion=osversion, memory=memory,
+                                      disk=disk, sn=sn, model_name=model_name,
+                                      cpu_core=cpu_core, beizhu=beizhu)
 
 
             ret['status'] = False
@@ -260,6 +268,3 @@ def hostupdate(request):  ## 更新
             ret['status'] = False
             ret['error'] = '账号或密码错误'
         return HttpResponse(json.dumps(ret))
-
-
-
