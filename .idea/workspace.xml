@@ -31,201 +31,118 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="runner.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hostinfo/ansible_runner/runner.py">
+      <file leaf-file-name="add.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/jigui/add.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="18" column="36" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="312" selection-end-column="0" />
-              <folding>
-                <marker date="1500560028484" expanded="true" signature="28:146" ph="import ..." />
-                <marker date="1500560028484" expanded="true" signature="858:924" ph="..." />
-                <marker date="1500560028484" expanded="true" signature="956:4593" ph="..." />
-                <marker date="1500560028484" expanded="true" signature="963:1022" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
-                <marker date="1500560028484" expanded="true" signature="1062:1395" ph="..." />
-                <marker date="1500560028484" expanded="true" signature="2293:4355" ph="..." />
-                <marker date="1500560028484" expanded="true" signature="2465:2569" ph="..." />
-                <marker date="1500560028484" expanded="true" signature="4378:4593" ph="..." />
-                <marker date="1500560028484" expanded="true" signature="4626:9724" ph="..." />
-                <marker date="1500560028484" expanded="true" signature="4633:4660" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
-                <marker date="1500560028484" expanded="true" signature="4700:4890" ph="..." />
-                <marker date="1500560028484" expanded="true" signature="5601:6799" ph="..." />
-                <marker date="1500560028484" expanded="true" signature="6879:7095" ph="..." />
-                <marker date="1500560028484" expanded="true" signature="6950:7073" ph="..." />
-                <marker date="1500560028484" expanded="true" signature="7173:9007" ph="..." />
-                <marker date="1500560028484" expanded="true" signature="7184:7336" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
-                <marker date="1500560028484" expanded="true" signature="7378:7638" ph="..." />
-                <marker date="1500560028484" expanded="true" signature="8474:8583" ph="..." />
-                <marker date="1500560028484" expanded="true" signature="8722:8834" ph="..." />
-                <marker date="1500560028484" expanded="true" signature="8853:9007" ph="..." />
-                <marker date="1500560028484" expanded="true" signature="9039:9724" ph="..." />
-                <marker date="1500560028484" expanded="true" signature="9050:9191" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
-                <marker date="1500560028484" expanded="true" signature="9430:9700" ph="..." />
-                <marker date="1500560028484" expanded="true" signature="9462:9647" ph="..." />
-                <marker date="1500560028484" expanded="true" signature="9746:10684" ph="..." />
-                <marker date="1500560028484" expanded="true" signature="9763:9994" ph="..." />
-                <marker date="1500560028484" expanded="true" signature="9775:9985" ph="..." />
-                <marker date="1500560028484" expanded="true" signature="10002:10183" ph="..." />
-                <marker date="1500560028484" expanded="true" signature="10443:10666" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="callback.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hostinfo/ansible_runner/callback.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="13" column="74" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
-              <folding>
-                <marker date="1500560028593" expanded="true" signature="30:117" ph="import ..." />
-                <marker date="1500560028593" expanded="true" signature="166:1118" ph="..." />
-                <marker date="1500560028593" expanded="true" signature="206:323" ph="..." />
-                <marker date="1500560028593" expanded="true" signature="364:722" ph="..." />
-                <marker date="1500560028593" expanded="true" signature="765:815" ph="..." />
-                <marker date="1500560028593" expanded="true" signature="883:928" ph="..." />
-                <marker date="1500560028593" expanded="true" signature="980:1025" ph="..." />
-                <marker date="1500560028593" expanded="true" signature="1073:1118" ph="..." />
-                <marker date="1500560028593" expanded="true" signature="1165:2148" ph="..." />
-                <marker date="1500560028593" expanded="true" signature="1172:1213" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
-                <marker date="1500560028593" expanded="true" signature="1253:1368" ph="..." />
-                <marker date="1500560028593" expanded="true" signature="1409:1604" ph="..." />
-                <marker date="1500560028593" expanded="true" signature="1647:1697" ph="..." />
-                <marker date="1500560028593" expanded="true" signature="1765:1810" ph="..." />
-                <marker date="1500560028593" expanded="true" signature="1862:1907" ph="..." />
-                <marker date="1500560028593" expanded="true" signature="1955:2000" ph="..." />
-                <marker date="1500560028593" expanded="true" signature="2067:2082" ph="..." />
-                <marker date="1500560028593" expanded="true" signature="2133:2148" ph="..." />
-                <marker date="1500560028593" expanded="true" signature="2198:5054" ph="..." />
-                <marker date="1500560028593" expanded="true" signature="2205:2384" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
-                <marker date="1500560028593" expanded="true" signature="2517:2685" ph="..." />
-                <marker date="1500560028593" expanded="true" signature="2720:2895" ph="..." />
-                <marker date="1500560028593" expanded="true" signature="2739:2894" ph="..." />
-                <marker date="1500560028593" expanded="true" signature="2763:2855" ph="..." />
-                <marker date="1500560028593" expanded="true" signature="2930:3071" ph="..." />
-                <marker date="1500560028593" expanded="true" signature="2949:3070" ph="..." />
-                <marker date="1500560028593" expanded="true" signature="2973:3031" ph="..." />
-                <marker date="1500560028593" expanded="true" signature="3122:3174" ph="..." />
-                <marker date="1500560028593" expanded="true" signature="3227:3242" ph="..." />
-                <marker date="1500560028593" expanded="true" signature="3309:3374" ph="..." />
-                <marker date="1500560028593" expanded="true" signature="3425:3477" ph="..." />
-                <marker date="1500560028593" expanded="true" signature="3524:3873" ph="..." />
-                <marker date="1500560028593" expanded="true" signature="3622:3688" ph="..." />
-                <marker date="1500560028593" expanded="true" signature="3751:3873" ph="..." />
-                <marker date="1500560028593" expanded="true" signature="3781:3872" ph="..." />
-                <marker date="1500560028593" expanded="true" signature="3911:4223" ph="..." />
-                <marker date="1500560028593" expanded="true" signature="4009:4142" ph="..." />
-                <marker date="1500560028593" expanded="true" signature="4273:4401" ph="..." />
-                <marker date="1500560028593" expanded="true" signature="4455:4489" ph="..." />
-                <marker date="1500560028593" expanded="true" signature="4548:4582" ph="..." />
-                <marker date="1500560028593" expanded="true" signature="4637:4671" ph="..." />
-                <marker date="1500560028593" expanded="true" signature="4714:4793" ph="..." />
-                <marker date="1500560028593" expanded="true" signature="4838:4877" ph="..." />
-                <marker date="1500560028593" expanded="true" signature="4926:4965" ph="..." />
-                <marker date="1500560028593" expanded="true" signature="5015:5054" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hostinfo/ansible_runner/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state relative-caret-position="152">
+              <caret line="8" column="33" lean-forward="false" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="inventory.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hostinfo/ansible_runner/inventory.py">
+      <file leaf-file-name="jiguiedit.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/jigui/jiguiedit.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="14" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
-              <folding>
-                <marker date="1500560028651" expanded="true" signature="30:177" ph="import ..." />
-                <marker date="1500560028651" expanded="true" signature="204:1443" ph="..." />
-                <marker date="1500560028651" expanded="true" signature="237:475" ph="..." />
-                <marker date="1500560028651" expanded="true" signature="511:1443" ph="..." />
-                <marker date="1500560028651" expanded="true" signature="1065:1370" ph="..." />
-                <marker date="1500560028651" expanded="true" signature="1480:3280" ph="..." />
-                <marker date="1500560028651" expanded="true" signature="1487:1533" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
-                <marker date="1500560028651" expanded="true" signature="1577:1956" ph="..." />
-                <marker date="1500560028651" expanded="true" signature="2002:3280" ph="..." />
-                <marker date="1500560028651" expanded="true" signature="2013:2442" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
-                <marker date="1500560028651" expanded="true" signature="2455:2511" ph="..." />
-                <marker date="1500560028651" expanded="true" signature="2717:3280" ph="..." />
-                <marker date="1500560028651" expanded="true" signature="2839:3184" ph="..." />
-                <marker date="1500560028651" expanded="true" signature="2889:3184" ph="..." />
-                <marker date="1500560028651" expanded="true" signature="2945:3055" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cmd.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hostinfo/ansible_runner/cmd.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="475">
+              <caret line="25" column="24" lean-forward="false" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="apps.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hostinfo/apps.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hostinfo/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="836">
-              <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tests.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hostinfo/tests.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hostinfo/urls.py">
+      <file leaf-file-name="show.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/jigui/show.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="380">
-              <caret line="21" column="48" lean-forward="false" selection-start-line="21" selection-start-column="48" selection-end-line="21" selection-end-column="48" />
-              <folding>
-                <element signature="e#638#670#0" expanded="true" />
-              </folding>
+              <caret line="20" column="35" lean-forward="false" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/hostinfo/views.py">
+      <file leaf-file-name="xiangxi.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/jigui/xiangxi.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="29" column="57" lean-forward="true" selection-start-line="29" selection-start-column="57" selection-end-line="29" selection-end-column="57" />
+            <state relative-caret-position="532">
+              <caret line="28" column="24" lean-forward="false" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cmd.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/host/cmd.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="38">
+              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="25" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="history.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/host/history.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="38">
+              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="10" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="host.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/host/host.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="551">
+              <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="yml.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/host/yml.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1292">
+              <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1083">
+              <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="38">
+              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="25" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>资产</find>
+      <find>header-css</find>
+      <find>base-header</find>
+      <find>资产列表</find>
+      <find>page-content-title</find>
+      <find>page-nav-tab</find>
+      <find>page-content</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -234,17 +151,12 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/cmdb/urls.py" />
-        <option value="$PROJECT_DIR$/templates/base.html" />
-        <option value="$PROJECT_DIR$/templates/jigui/show.html" />
-        <option value="$PROJECT_DIR$/templates/host/host.html" />
         <option value="$PROJECT_DIR$/templates/foot_script.html" />
-        <option value="$PROJECT_DIR$/templates/host/yml.html" />
         <option value="$PROJECT_DIR$/index/admin.py" />
         <option value="$PROJECT_DIR$/cmdb/settings.py" />
         <option value="$PROJECT_DIR$/hostinfo/admin.py" />
         <option value="$PROJECT_DIR$/hostinfo/urls.py" />
         <option value="$PROJECT_DIR$/jigui/urls.py" />
-        <option value="$PROJECT_DIR$/templates/nav.html" />
         <option value="$PROJECT_DIR$/hostinfo/tests.py" />
         <option value="$PROJECT_DIR$/hostinfo/models.py" />
         <option value="$PROJECT_DIR$/hostinfo/ansible_runner/runner.py" />
@@ -252,6 +164,21 @@
         <option value="$PROJECT_DIR$/hostinfo/ansible_runner/inventory.py" />
         <option value="$PROJECT_DIR$/hostinfo/ansible_runner/__init__.py" />
         <option value="$PROJECT_DIR$/hostinfo/views.py" />
+        <option value="D:/MadKing/templates/assets/assets.html" />
+        <option value="D:/MadKing/statics/css/nifty.min.css" />
+        <option value="$PROJECT_DIR$/templates/nav.html" />
+        <option value="D:/MadKing/templates/base.html" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/templates/base.html" />
+        <option value="$PROJECT_DIR$/templates/jigui/jigui.html" />
+        <option value="$PROJECT_DIR$/templates/jigui/add.html" />
+        <option value="$PROJECT_DIR$/templates/jigui/jiguiedit.html" />
+        <option value="$PROJECT_DIR$/templates/jigui/show.html" />
+        <option value="$PROJECT_DIR$/templates/jigui/xiangxi.html" />
+        <option value="$PROJECT_DIR$/templates/host/cmd.html" />
+        <option value="$PROJECT_DIR$/templates/host/history.html" />
+        <option value="$PROJECT_DIR$/templates/host/host.html" />
+        <option value="$PROJECT_DIR$/templates/host/yml.html" />
       </list>
     </option>
   </component>
@@ -283,6 +210,7 @@
       </profile-state>
     </entry>
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -320,7 +248,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="hostinfo" />
+              <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -334,11 +262,29 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="hostinfo" />
+              <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ansible_runner" />
+              <option name="myItemId" value="jigui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cmdb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cmdb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="host" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -362,9 +308,9 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="D:/jumpserver/apps/jumpserver/settings.py" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.django.DjangoModulesConfigurable" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -378,7 +324,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Django server.未命名">
+  <component name="RunManager" selected="Django server.cmdb">
     <configuration default="true" type="CompoundRunConfigurationType" factoryName="Compound Run Configuration">
       <method />
     </configuration>
@@ -587,7 +533,7 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method />
     </configuration>
-    <configuration default="false" name="未命名" type="Python.DjangoServer" factoryName="Django server" singleton="true">
+    <configuration default="false" name="cmdb" type="Python.DjangoServer" factoryName="Django server" singleton="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -611,8 +557,33 @@
       <option name="customRunCommand" value="" />
       <method />
     </configuration>
-    <list size="1">
-      <item index="0" class="java.lang.String" itemvalue="Django server.未命名" />
+    <configuration default="false" name="未命名" type="Python.DjangoServer" factoryName="Django server">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="apps.jumpserver.settings" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Python35\python.exe" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="apps" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8004" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="http://127.0.0.1:8004/" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method />
+    </configuration>
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="Django server.cmdb" />
+      <item index="1" class="java.lang.String" itemvalue="Django server.未命名" />
     </list>
     <configuration default="true" type="tests" factoryName="Attests">
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -664,16 +635,16 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16364606" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17004265" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="调试" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32910052" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5845987" sideWeight="0.5063966" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3308026" sideWeight="0.5133262" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329718" sideWeight="0.4978678" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329718" sideWeight="0.4978678" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329718" sideWeight="0.4978678" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="运行" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5845987" sideWeight="0.4936034" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="运行" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39262474" sideWeight="0.48667377" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -684,6 +655,7 @@
       <window_info id="版本控制" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="manage.py@MadKing" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329718" sideWeight="0.4978678" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3490566" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -710,244 +682,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/_config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitattributes">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cmdb/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/host/yml.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2071">
-          <caret line="109" column="25" lean-forward="false" selection-start-line="109" selection-start-column="25" selection-end-line="109" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hostinfo/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="34" column="13" lean-forward="false" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="14" lean-forward="false" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hostinfo/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hostinfo/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jigui/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cmdb/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2717">
-          <caret line="143" column="38" lean-forward="false" selection-start-line="143" selection-start-column="38" selection-end-line="143" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jigui/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hostinfo/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/host/yml.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2071">
-          <caret line="109" column="25" lean-forward="false" selection-start-line="109" selection-start-column="25" selection-end-line="109" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/jigui/show.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1235">
-          <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cmdb/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/foot_script.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2964">
-          <caret line="156" column="25" lean-forward="false" selection-start-line="156" selection-start-column="25" selection-end-line="156" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/host/host.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9367">
-          <caret line="493" column="30" lean-forward="false" selection-start-line="493" selection-start-column="30" selection-end-line="493" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/host/cmd.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1539">
-          <caret line="81" column="103" lean-forward="false" selection-start-line="81" selection-start-column="82" selection-end-line="81" selection-end-column="103" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/nav.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="950">
-          <caret line="50" column="6" lean-forward="false" selection-start-line="50" selection-start-column="6" selection-end-line="50" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/navbar-static-top.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="33" column="1" lean-forward="false" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cmdb/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/jigui/show.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1235">
-          <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/foot_script.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2964">
-          <caret line="156" column="25" lean-forward="false" selection-start-line="156" selection-start-column="25" selection-end-line="156" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/host/host.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9367">
-          <caret line="493" column="30" lean-forward="false" selection-start-line="493" selection-start-column="30" selection-end-line="493" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/host/cmd.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1539">
-          <caret line="81" column="103" lean-forward="false" selection-start-line="81" selection-start-column="82" selection-end-line="81" selection-end-column="103" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="33" column="1" lean-forward="false" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jigui/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/host/yml.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2071">
-          <caret line="109" column="25" lean-forward="false" selection-start-line="109" selection-start-column="25" selection-end-line="109" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jigui/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="14" lean-forward="false" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/manage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="68" lean-forward="true" selection-start-line="5" selection-start-column="68" selection-end-line="5" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cmdb/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="293">
@@ -983,13 +717,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/nav.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="27" column="52" lean-forward="true" selection-start-line="27" selection-start-column="52" selection-end-line="27" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hostinfo/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
@@ -1001,16 +728,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hostinfo/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
+        <state relative-caret-position="399">
           <caret line="21" column="48" lean-forward="false" selection-start-line="21" selection-start-column="48" selection-end-line="21" selection-end-column="48" />
           <folding>
-            <element signature="e#638#670#0" expanded="true" />
+            <element signature="e#638#670#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1027,7 +753,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1035,7 +760,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1043,91 +767,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="18" column="36" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="312" selection-end-column="0" />
-          <folding>
-            <marker date="1500560028484" expanded="true" signature="28:146" ph="import ..." />
-            <marker date="1500560028484" expanded="true" signature="858:924" ph="..." />
-            <marker date="1500560028484" expanded="true" signature="956:4593" ph="..." />
-            <marker date="1500560028484" expanded="true" signature="963:1022" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
-            <marker date="1500560028484" expanded="true" signature="1062:1395" ph="..." />
-            <marker date="1500560028484" expanded="true" signature="2293:4355" ph="..." />
-            <marker date="1500560028484" expanded="true" signature="2465:2569" ph="..." />
-            <marker date="1500560028484" expanded="true" signature="4378:4593" ph="..." />
-            <marker date="1500560028484" expanded="true" signature="4626:9724" ph="..." />
-            <marker date="1500560028484" expanded="true" signature="4633:4660" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
-            <marker date="1500560028484" expanded="true" signature="4700:4890" ph="..." />
-            <marker date="1500560028484" expanded="true" signature="5601:6799" ph="..." />
-            <marker date="1500560028484" expanded="true" signature="6879:7095" ph="..." />
-            <marker date="1500560028484" expanded="true" signature="6950:7073" ph="..." />
-            <marker date="1500560028484" expanded="true" signature="7173:9007" ph="..." />
-            <marker date="1500560028484" expanded="true" signature="7184:7336" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
-            <marker date="1500560028484" expanded="true" signature="7378:7638" ph="..." />
-            <marker date="1500560028484" expanded="true" signature="8474:8583" ph="..." />
-            <marker date="1500560028484" expanded="true" signature="8722:8834" ph="..." />
-            <marker date="1500560028484" expanded="true" signature="8853:9007" ph="..." />
-            <marker date="1500560028484" expanded="true" signature="9039:9724" ph="..." />
-            <marker date="1500560028484" expanded="true" signature="9050:9191" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
-            <marker date="1500560028484" expanded="true" signature="9430:9700" ph="..." />
-            <marker date="1500560028484" expanded="true" signature="9462:9647" ph="..." />
-            <marker date="1500560028484" expanded="true" signature="9746:10684" ph="..." />
-            <marker date="1500560028484" expanded="true" signature="9763:9994" ph="..." />
-            <marker date="1500560028484" expanded="true" signature="9775:9985" ph="..." />
-            <marker date="1500560028484" expanded="true" signature="10002:10183" ph="..." />
-            <marker date="1500560028484" expanded="true" signature="10443:10666" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hostinfo/ansible_runner/callback.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="74" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
-          <folding>
-            <marker date="1500560028593" expanded="true" signature="30:117" ph="import ..." />
-            <marker date="1500560028593" expanded="true" signature="166:1118" ph="..." />
-            <marker date="1500560028593" expanded="true" signature="206:323" ph="..." />
-            <marker date="1500560028593" expanded="true" signature="364:722" ph="..." />
-            <marker date="1500560028593" expanded="true" signature="765:815" ph="..." />
-            <marker date="1500560028593" expanded="true" signature="883:928" ph="..." />
-            <marker date="1500560028593" expanded="true" signature="980:1025" ph="..." />
-            <marker date="1500560028593" expanded="true" signature="1073:1118" ph="..." />
-            <marker date="1500560028593" expanded="true" signature="1165:2148" ph="..." />
-            <marker date="1500560028593" expanded="true" signature="1172:1213" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
-            <marker date="1500560028593" expanded="true" signature="1253:1368" ph="..." />
-            <marker date="1500560028593" expanded="true" signature="1409:1604" ph="..." />
-            <marker date="1500560028593" expanded="true" signature="1647:1697" ph="..." />
-            <marker date="1500560028593" expanded="true" signature="1765:1810" ph="..." />
-            <marker date="1500560028593" expanded="true" signature="1862:1907" ph="..." />
-            <marker date="1500560028593" expanded="true" signature="1955:2000" ph="..." />
-            <marker date="1500560028593" expanded="true" signature="2067:2082" ph="..." />
-            <marker date="1500560028593" expanded="true" signature="2133:2148" ph="..." />
-            <marker date="1500560028593" expanded="true" signature="2198:5054" ph="..." />
-            <marker date="1500560028593" expanded="true" signature="2205:2384" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
-            <marker date="1500560028593" expanded="true" signature="2517:2685" ph="..." />
-            <marker date="1500560028593" expanded="true" signature="2720:2895" ph="..." />
-            <marker date="1500560028593" expanded="true" signature="2739:2894" ph="..." />
-            <marker date="1500560028593" expanded="true" signature="2763:2855" ph="..." />
-            <marker date="1500560028593" expanded="true" signature="2930:3071" ph="..." />
-            <marker date="1500560028593" expanded="true" signature="2949:3070" ph="..." />
-            <marker date="1500560028593" expanded="true" signature="2973:3031" ph="..." />
-            <marker date="1500560028593" expanded="true" signature="3122:3174" ph="..." />
-            <marker date="1500560028593" expanded="true" signature="3227:3242" ph="..." />
-            <marker date="1500560028593" expanded="true" signature="3309:3374" ph="..." />
-            <marker date="1500560028593" expanded="true" signature="3425:3477" ph="..." />
-            <marker date="1500560028593" expanded="true" signature="3524:3873" ph="..." />
-            <marker date="1500560028593" expanded="true" signature="3622:3688" ph="..." />
-            <marker date="1500560028593" expanded="true" signature="3751:3873" ph="..." />
-            <marker date="1500560028593" expanded="true" signature="3781:3872" ph="..." />
-            <marker date="1500560028593" expanded="true" signature="3911:4223" ph="..." />
-            <marker date="1500560028593" expanded="true" signature="4009:4142" ph="..." />
-            <marker date="1500560028593" expanded="true" signature="4273:4401" ph="..." />
-            <marker date="1500560028593" expanded="true" signature="4455:4489" ph="..." />
-            <marker date="1500560028593" expanded="true" signature="4548:4582" ph="..." />
-            <marker date="1500560028593" expanded="true" signature="4637:4671" ph="..." />
-            <marker date="1500560028593" expanded="true" signature="4714:4793" ph="..." />
-            <marker date="1500560028593" expanded="true" signature="4838:4877" ph="..." />
-            <marker date="1500560028593" expanded="true" signature="4926:4965" ph="..." />
-            <marker date="1500560028593" expanded="true" signature="5015:5054" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1135,23 +774,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
           <caret line="14" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
-          <folding>
-            <marker date="1500560028651" expanded="true" signature="30:177" ph="import ..." />
-            <marker date="1500560028651" expanded="true" signature="204:1443" ph="..." />
-            <marker date="1500560028651" expanded="true" signature="237:475" ph="..." />
-            <marker date="1500560028651" expanded="true" signature="511:1443" ph="..." />
-            <marker date="1500560028651" expanded="true" signature="1065:1370" ph="..." />
-            <marker date="1500560028651" expanded="true" signature="1480:3280" ph="..." />
-            <marker date="1500560028651" expanded="true" signature="1487:1533" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
-            <marker date="1500560028651" expanded="true" signature="1577:1956" ph="..." />
-            <marker date="1500560028651" expanded="true" signature="2002:3280" ph="..." />
-            <marker date="1500560028651" expanded="true" signature="2013:2442" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
-            <marker date="1500560028651" expanded="true" signature="2455:2511" ph="..." />
-            <marker date="1500560028651" expanded="true" signature="2717:3280" ph="..." />
-            <marker date="1500560028651" expanded="true" signature="2839:3184" ph="..." />
-            <marker date="1500560028651" expanded="true" signature="2889:3184" ph="..." />
-            <marker date="1500560028651" expanded="true" signature="2945:3055" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1159,14 +781,236 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hostinfo/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="29" column="57" lean-forward="true" selection-start-line="29" selection-start-column="57" selection-end-line="29" selection-end-column="57" />
+        <state relative-caret-position="456">
+          <caret line="29" column="57" lean-forward="false" selection-start-line="29" selection-start-column="57" selection-end-line="29" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hostinfo/ansible_runner/callback.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="13" column="74" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/MadKing/assets/templatetags/custom_tag.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/MadKing/MadKing/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-28">
+          <caret line="118" column="0" lean-forward="false" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/MadKing/assets/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="13" column="49" lean-forward="true" selection-start-line="13" selection-start-column="49" selection-end-line="13" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/MadKing/templates/assets/asset_category.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="19" lean-forward="true" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/MadKing/statics/css/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="4" column="113458" lean-forward="false" selection-start-line="4" selection-start-column="113458" selection-end-line="4" selection-end-column="113458" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/MadKing/statics/css/nifty.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="0" column="1035" lean-forward="false" selection-start-line="0" selection-start-column="1017" selection-end-line="0" selection-end-column="1035" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/MadKing/assets/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="127" column="48" lean-forward="false" selection-start-line="127" selection-start-column="48" selection-end-line="127" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/MadKing/statics/css/themes/type-b/theme-dark.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="1658" lean-forward="false" selection-start-line="0" selection-start-column="1658" selection-end-line="0" selection-end-column="1658" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/MadKing/templates/assets/assets.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/MadKing/MadKingClient/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2679">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/MadKing/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="17" lean-forward="false" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/MadKing/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="586" column="67" lean-forward="false" selection-start-line="586" selection-start-column="67" selection-end-line="586" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/MadKing/MadKing/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="28" column="53" lean-forward="true" selection-start-line="28" selection-start-column="53" selection-end-line="28" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/MadKing/MadKingClient/var/.asset_id">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/MadKing/MadKingClient/plugins/linux/sysinfo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2622">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/MadKing/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/jumpserver/apps/templates/_base_list.html" />
+    <entry file="file://D:/jumpserver/apps/__init__.py" />
+    <entry file="file://D:/jumpserver/apps/manage.py" />
+    <entry file="file://D:/jumpserver/apps/jumpserver/middleware.py" />
+    <entry file="file://D:/jumpserver/apps/jumpserver/wsgi.py" />
+    <entry file="file://D:/jumpserver/apps/templates/base.html" />
+    <entry file="file://D:/jumpserver/apps/templates/index.html" />
+    <entry file="file://$PROJECT_DIR$/templates/nav.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="29" column="38" lean-forward="false" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/jigui/jigui.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="25" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/jigui/add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="33" lean-forward="false" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/jigui/jiguiedit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="25" column="24" lean-forward="false" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/jigui/show.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="20" column="35" lean-forward="false" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/jigui/xiangxi.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="28" column="24" lean-forward="false" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="25" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1083">
+          <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/host/history.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="10" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/host/host.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/host/cmd.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="25" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/host/yml.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1292">
+          <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
           <folding />
         </state>
       </provider>

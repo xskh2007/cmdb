@@ -1,10 +1,35 @@
 {% extends "base.html" %}
 
-{% block mainbody %}
+    {% block header-css %}
+    {% endblock %}
+
+
+
+
+{% block page-content-title %} 首页 {% endblock %}
+
+{% block page-nav-tab %}
+ <ol class="breadcrumb">
+                    <li>
+                        <a href="../index.html">首页</a>
+                    </li>
+                    <li>
+                        <a>详情</a>
+                    </li>
+                    <li class="active">
+                        <strong>首页</strong></li>
+</ol>
+{% endblock %}
+
+
+
+{% block page-content %}
+  <div class="wrapper wrapper-content animated fadeInRight">
+
  <div class="row  border-bottom white-bg dashboard-header">
 
                     <div class="col-sm-3">
-                        <h2>欢迎您，{{ request.session.user }} </h2>
+                        <h2>欢迎您，{{ user }} </h2>
                         <small>您有 42 条未读消息 和 6 条通知.</small>
                         <ul class="list-group clear-list m-t">
                             <li class="list-group-item fist-item">
@@ -42,5 +67,5 @@
 
 
             </div>
-
+     </div>
 {% endblock %}

@@ -1,10 +1,16 @@
 {% extends "base.html" %}
 
-{% block mainbody %}
+    {% block header-css %}
+    {% endblock %}
 
-    <div class="row wrapper border-bottom white-bg page-heading">
-        <div class="col-lg-10">
-            <h3>机柜</h3>
+
+
+
+{% block page-content-title %} 首页 {% endblock %}
+
+{% block page-nav-tab %}
+
+
             <ol class="breadcrumb">
                 <li>
                     <a href="../index.html">首页</a>
@@ -16,11 +22,16 @@
                     <strong>机房：{{ xiangxi_info.name }}  &nbsp;&nbsp;&nbsp;&nbsp;{% if   perms.jigui.change_jiguiinfo %} &nbsp;&nbsp;&nbsp;&nbsp;<a href="/jigui/jiguiedit-{{ xiangxi_info.id }}.html"> 编辑</a>   {% endif %}  {% if  perms.jigui.delete_jiguiinfo   %}|    <a href="/jigui/jiguidel-{{ xiangxi_info.id }}.html">删除</a>{% endif %}</strong>
                 </li>
             </ol>
-        </div>
-        <div class="col-lg-2">
+   {% endblock %}
 
-        </div>
-    </div>
+
+
+{% block page-content %}
+
+
+
+
+
     <div class="wrapper wrapper-content animated fadeInRight">
         <div class="row">
             <div class="col-lg-12">

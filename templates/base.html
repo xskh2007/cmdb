@@ -1,3 +1,5 @@
+{% load cache %}
+
 <!DOCTYPE html>
 
 <html>
@@ -7,23 +9,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <title>首页</title>
-    {% include 'link_css.html' %}
+
+
+          {% include 'link_css.html' %}
+    {% block header-css %}
+    {% endblock %}
+
 </head>
 
 <body>
 <div id="wrapper">
+
+
+
+
+    {% cache  600     nav  %}
     {% include 'nav.html' %}
+    {% endcache%}
+
+
     <div id="page-wrapper" class="gray-bg">
         <div class="row border-bottom">
             {% include 'navbar-static-top.html' %}
         </div>
-        {% block mainbody %}
+
+
+      <div class="row wrapper border-bottom white-bg page-heading">
+            <div class="col-lg-10">
+                <h2>{% block page-content-title %}  {% endblock %}</h2>
+
+
+
+                    {% block page-nav-tab %}
+
+                {% endblock %}
+
+            </div>
+            <div class="col-lg-2">
+
+            </div>
+        </div>
+
+
+        {% block page-content %}
 
 
         {% endblock %}
+
         {% include 'footer.html' %}
     </div>
-</div>
+
 
 
 </body>

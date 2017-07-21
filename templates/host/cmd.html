@@ -1,25 +1,29 @@
 {% extends "base.html" %}
 
-{% block mainbody %}
-    <div class="row wrapper border-bottom white-bg page-heading">
-        <div class="col-lg-10">
-            <h2>命令行</h2>
-            <ol class="breadcrumb">
-                <li>
-                    <a href="../index.html">首页</a>
-                </li>
-                <li>
-                    <a>添加</a>
-                </li>
-                <li class="active">
-                    <strong>机柜</strong>
-                </li>
-            </ol>
-        </div>
-        <div class="col-lg-2">
+    {% block header-css %}
+    {% endblock %}
 
-        </div>
-    </div>
+
+
+
+{% block page-content-title %} 命令行 {% endblock %}
+
+{% block page-nav-tab %}
+ <ol class="breadcrumb">
+                    <li>
+                        <a href="../index.html">首页</a>
+                    </li>
+                    <li>
+                        <a>详情</a>
+                    </li>
+                    <li class="active">
+                        <strong>命令行</strong></li>
+</ol>
+{% endblock %}
+
+
+
+{% block page-content %}
 
     <div class="wrapper wrapper-content animated fadeInRight">
         <div class="row">

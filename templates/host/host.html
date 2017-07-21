@@ -1,11 +1,14 @@
 {% extends "base.html" %}
 
-{% block mainbody %}
+    {% block header-css %}
+    {% endblock %}
 
 
-    <div class="row wrapper border-bottom white-bg page-heading">
-        <div class="col-lg-10">
-            <h2>服务器</h2>
+
+
+{% block page-content-title %}服务器 {% endblock %}
+
+{% block page-nav-tab %}
             <ol class="breadcrumb">
                 <li>
                     <a href="../index.html">首页</a>
@@ -19,11 +22,12 @@
                     </button>
                 </li>
             </ol>
-        </div>
-        <div class="col-lg-2">
+{% endblock %}
 
-        </div>
-    </div>
+
+
+{% block page-content %}
+
     <div class="wrapper wrapper-content animated fadeInRight">
         <div class="row">
             <div class="col-lg-12">
