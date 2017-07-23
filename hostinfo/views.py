@@ -5,10 +5,10 @@ from index.models import Business
 import paramiko
 from django.contrib.auth.decorators import permission_required, login_required
 
-# from  hostinfo.ansible_runner.runner import PlayBookRunner
-#
-# from hostinfo.ansible_runner.callback import CommandResultCallback
-# from  hostinfo.ansible_runner.runner import AdHocRunner
+from  hostinfo.ansible_runner.runner import PlayBookRunner
+
+from hostinfo.ansible_runner.callback import CommandResultCallback
+from  hostinfo.ansible_runner.runner import AdHocRunner
 
 
 @login_required(login_url="/login.html")
@@ -243,22 +243,22 @@ def hostupdate(request):  ## 更新
                 },
             ]
             task_tuple = (('setup', ''),)
-            # runner = AdHocRunner(assets)
-            # result = runner.run(task_tuple=task_tuple, pattern='all', task_name='Ansible Ad-hoc')
-            # data = result['contacted']['host'][0]['ansible_facts']
-            # hostname = data['ansible_fqdn']
-            # osversion = data['ansible_distribution'] + data['ansible_distribution_version']
-            # disk = data['ansible_devices']["vda"]['size']
-            # memory = '{}MB'.format(data['ansible_memtotal_mb'])
-            # sn = data['ansible_product_serial']
-            # model_name = data['ansible_product_name']
-            # cpu_core = data['ansible_processor'][1] + "{}核".format(data['ansible_processor_count'])
-            # obj = Host.objects.filter(id=id).update(hostname=hostname, ip=ip, port=port,
-            #                           username=username, password=password,
-            #                           jifang_id=jifang,
-            #                           osversion=osversion, memory=memory,
-            #                           disk=disk, sn=sn, model_name=model_name,
-            #                           cpu_core=cpu_core, beizhu=beizhu)
+            runner = AdHocRunner(assets)
+            result = runner.run(task_tuple=task_tuple, pattern='all', task_name='Ansible Ad-hoc')
+            data = result['contacted']['host'][0]['ansible_facts']
+            hostname = data['ansible_fqdn']
+            osversion = data['ansible_distribution'] + data['ansible_distribution_version']
+            disk = data['ansible_devices']["vda"]['size']
+            memory = '{}MB'.format(data['ansible_memtotal_mb'])
+            sn = data['ansible_product_serial']
+            model_name = data['ansible_product_name']
+            cpu_core = data['ansible_processor'][1] + "{}核".format(data['ansible_processor_count'])
+            obj = Host.objects.filter(id=id).update(hostname=hostname, ip=ip, port=port,
+                                      username=username, password=password,
+                                      jifang_id=jifang,
+                                      osversion=osversion, memory=memory,
+                                      disk=disk, sn=sn, model_name=model_name,
+                                      cpu_core=cpu_core, beizhu=beizhu)
 
 
             ret['status'] = False
