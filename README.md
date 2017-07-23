@@ -15,9 +15,12 @@ github链接：https://github.com/hequan2017/cmdb
 环境 python3.6.1 django 1.11.3   需要安装的模块为 django-suit，ansible, paramiko
 服务器请yum按照  sshpass ，不然无法获取资产信息。
 
+版本更新1.5.5
+1 版本小优化
 
 
 版本更新1.5
+
 1 增加资产更新，分别为 添加 查看 修改 更新 删除。 可真实获取到服务器资产
 
 版本更新1.4
