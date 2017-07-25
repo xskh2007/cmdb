@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://D:\MadKing\.idea\MadKing.iml" filepath="D:\MadKing\.idea\MadKing.iml" />
-      <module fileurl="file://D:/jumpserver/jumpserver/.idea/apps.iml" filepath="D:/jumpserver/jumpserver/.idea/apps.iml" />
+      <module fileurl="file://D:\jumpserver\jumpserver\.idea\apps.iml" filepath="D:\jumpserver\jumpserver\.idea\apps.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/cmdb.iml" filepath="$PROJECT_DIR$/.idea/cmdb.iml" />
       <module fileurl="file://D:\zjump\.idea\zjump.iml" filepath="D:\zjump\.idea\zjump.iml" />
     </modules>

@@ -65,8 +65,13 @@
 
 <script>
 
+
+
+
+
     $(document).ready(function () {
         $('.dataTables-example').DataTable({
+
             "oLanguage": {
                 "sLengthMenu": "每页显示 _MENU_ 条记录",
                 "sZeroRecords": "对不起，查询不到任何相关数据",
@@ -82,6 +87,12 @@
                     "sLast": " 最后一页 "
                 }
             },
+            "order": [[ 1, 'asc' ]],
+         　　         　　columnDefs:[{
+    　　　　'targets' : [0],    //除第六，第七两列外，都默认不排序
+    　　　　'orderable' : false
+    　           　}],
+
 
             dom: '<"html5buttons"B>lTfgitp',
             buttons: [
