@@ -16,6 +16,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="zjump" />
     <orderEntry type="module" module-name="apps" />
+    <orderEntry type="module" module-name="mail" />
   </component>
   <component name="TemplatesService">
     <option name="TEMPLATE_CONFIGURATION" value="Django" />

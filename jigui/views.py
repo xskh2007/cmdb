@@ -101,3 +101,13 @@ def show(request):  ## 展示
         jq.append(i.jq)
 
     return render(request, 'jigui/show.html',{"name":name,'jq':jq})
+
+@login_required(login_url="/login.html")
+def delete_jigui(request):
+    if  request.method == "POST":
+             ids = request.POST.getlist('id')
+             idstring = ','.join(ids)
+             models.JiguiInfo.objects.extra(where=['id IN (' + idstring + ')']).delete()
+
+    jigui = models.JiguiInfo.objects.filter(id__gt=0)
+    return render(request, 'jigui/jigui.html', {"jigui_list": jigui, })

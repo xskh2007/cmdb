@@ -19,7 +19,7 @@ Including another URLconf
 from django.conf.urls import url,include
 
 
-from jigui.views import jigui, xiangxi, add, jigui_del,jigui_edit,show
+from jigui.views import jigui, xiangxi, add, jigui_del,jigui_edit,show,delete_jigui
 
 
 urlpatterns = [
@@ -28,6 +28,7 @@ urlpatterns = [
     url(r'^show.html$', show ,name='show'),
     url(r'^xiangxi-(?P<nid>\d+).html$', xiangxi,name='xiangxi'),
     url(r'^add.html$', add, name='addx'),
+    url(r'^jigui-del.html$', delete_jigui),
     url(r'^jiguidel-(?P<nid>\d+).html$', jigui_del),
     url(r'^jiguiedit-(?P<nid>\d+).html$', jigui_edit),
     ## url(r'^home',Home.as_view())   调用类里面的，如果是get调用get,post调用post
