@@ -1,7 +1,7 @@
-from  django.shortcuts import render, redirect
+from  django.shortcuts import render, redirect,HttpResponse
 from jigui import models
 from django.contrib.auth.decorators import permission_required,login_required
-
+import json
 @login_required(login_url="/login.html",)
 def jigui(request):  ##首页
     jigui = models.JiguiInfo.objects.filter(id__gt=0)
@@ -104,10 +104,11 @@ def show(request):  ## 展示
 
 @login_required(login_url="/login.html")
 def delete_jigui(request):
+    ret = {'status': True, 'error': None, 'data': None}
     if  request.method == "POST":
              ids = request.POST.getlist('id')
              idstring = ','.join(ids)
              models.JiguiInfo.objects.extra(where=['id IN (' + idstring + ')']).delete()
 
-    jigui = models.JiguiInfo.objects.filter(id__gt=0)
-    return render(request, 'jigui/jigui.html', {"jigui_list": jigui, })
+
+    return HttpResponse(json.dumps(ret))

@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
-    {% block header-css %}
-    {% endblock %}
+{% block header-css %}
+{% endblock %}
 
 
 
@@ -9,19 +9,21 @@
 {% block page-content-title %}服务器 {% endblock %}
 
 {% block page-nav-tab %}
-            <ol class="breadcrumb">
-                <li>
-                    <a href="../index.html">首页</a>
-                </li>
-                <li>
-                    <a>详情</a>
-                </li>
-                <li class="active">
-                    <strong>服务器</strong>
-                   {%   if     perms.hostinfo.add_host  %}   <button type="button" class="btn btn-primary  " data-toggle="modal" data-target="#myModal">添加 {%  endif %}
-                    </button>
-                </li>
-            </ol>
+    <ol class="breadcrumb">
+        <li>
+            <a href="../index.html">首页</a>
+        </li>
+        <li>
+            <a>详情</a>
+        </li>
+        <li class="active">
+            <strong>服务器</strong>
+            {% if     perms.hostinfo.add_host %}
+                <button type="button" class="btn btn-primary  " data-toggle="modal" data-target="#myModal">
+                添加 {% endif %}
+            </button>
+        </li>
+    </ol>
 {% endblock %}
 
 
@@ -56,17 +58,26 @@
                     <div class="ibox-content">
 
                         <div class="table-responsive">
+
+                        <a  class="btn btn-danger"    data-toggle="modal"
+                                                    data-target="#myModa6"  >批量删除
+                                            </a>
+
+                        <from  id="del_form_hostall">
+
                             <table class="table table-striped table-bordered table-hover dataTables-example"
                                    style="word-break:break-all; word-wrap:break-word;">
                                 <thead>
                                 <tr>
+                                      <th width="20"> <input  type="checkbox"    id="CheckedAll"></th>
                                     <th>主机名</th>
                                     <th>IP</th>
                                     <th>版本</th>
                                     <th>内存</th>
                                     <th>硬盘</th>
                                     <th>机房</th>
-                                    <th>变更 &nbsp;&nbsp;&nbsp;&nbsp;<span id="update_error" style="color:red;"></span></th>
+                                    <th>变更 &nbsp;&nbsp;&nbsp;&nbsp;<span id="update_error" style="color:red;"></span>
+                                    </th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -74,9 +85,11 @@
 
                                     <tr class="gradeX" nid="{{ row.id }}" jifang_id="{{ row.jifang_id }}"
                                         hostname="{{ row.hostname }}" ip="{{ row.ip }}" osversion="{{ row.osversion }}"
-                                        memory="{{ row.memory }}" disk="{{ row.disk }}"  sn="{{ row.sn }}"  beizhu="{{ row.beizhu }}"  username="{{  row.username }}"    port="{{  row.port }}"  cpu_core="{{ row.cpu_core }}" model_name="{{ row.model_name }}"
-                                        beizhu="{{  row.beizhu }}"
-                                    >
+                                        memory="{{ row.memory }}" disk="{{ row.disk }}" sn="{{ row.sn }}"
+                                        beizhu="{{ row.beizhu }}" username="{{ row.username }}" port="{{ row.port }}"
+                                        cpu_core="{{ row.cpu_core }}" model_name="{{ row.model_name }}"
+                                        beizhu="{{ row.beizhu }}" >
+                                     <td > <input type="checkbox"    value="{{ row.id }}" name="id"   ></td>
                                         <td>{{ row.hostname }}</td>
                                         <td>{{ row.ip }}</td>
                                         <td>{{ row.osversion }}</td>
@@ -87,18 +100,19 @@
                                             <button type="button" class="btn btn-primary  host_see" data-toggle="modal"
                                                     data-target="#myModa4">查看
                                             </button>
-                                               {%   if     perms.hostinfo.change_host  %}
-                                            <button type="button" class="btn btn-warning  host_change"
-                                                    data-toggle="modal" data-target="#myModa2">修改
-                                            </button> {% endif %}
-                                        {%   if     perms.hostinfo.change_host  %}
-                                            <a type="button" class="btn btn-warning  host_update"
-                                                    >更新
-                                            </a> {% endif %}
-                                          {%   if     perms.hostinfo.delete_host  %}
-                                            <button type="button" class="btn btn-danger   host_del" data-toggle="modal"
-                                                    data-target="#myModa5">删除
-                                            </button>{% endif %}
+                                            {% if     perms.hostinfo.change_host %}
+                                                <button type="button" class="btn btn-warning  host_change"
+                                                        data-toggle="modal" data-target="#myModa2">修改
+                                                </button> {% endif %}
+                                            {% if     perms.hostinfo.change_host %}
+                                                <a type="button" class="btn btn-warning  host_update"
+                                                >更新
+                                                </a> {% endif %}
+                                            {% if     perms.hostinfo.delete_host %}
+                                                <button type="button" class="btn btn-danger   host_del"
+                                                        data-toggle="modal"
+                                                        data-target="#myModa5">删除
+                                                </button>{% endif %}
 
                                         </td>
 
@@ -109,20 +123,20 @@
                                 </tbody>
 
 
-                                <tfoot>
-                                <tr>
-                                    <th>主机名</th>
-                                    <th>IP</th>
-                                    <th>版本</th>
-                                    <th>内存</th>
-                                    <th>硬盘</th>
-                                    <th>机房</th>
-                                    <th>变更</th>
-                                </tr>
-                                </tfoot>
+{#                                <tfoot>#}
+{#                                <tr>#}
+{#                                    <th>主机名</th>#}
+{#                                    <th>IP</th>#}
+{#                                    <th>版本</th>#}
+{#                                    <th>内存</th>#}
+{#                                    <th>硬盘</th>#}
+{#                                    <th>机房</th>#}
+{#                                    <th>变更</th>#}
+{#                                </tr>#}
+{#                                </tfoot>#}
                             </table>
 
-
+</from>
                         </div>
 
                     </div>
@@ -155,14 +169,16 @@
                         </div>
                         <div class="form-group"><label class="col-sm-3 control-label">端口：</label>
                             <div class="col-sm-5">
-                                <input type="text" name="port" class="form-control"   value="22"  placeholder="请输入端口"> <span
-                                    class="help-block m-b-none"></span>
+                                <input type="text" name="port" class="form-control" value="22" placeholder="请输入端口">
+                                <span
+                                        class="help-block m-b-none"></span>
 
                             </div>
                         </div>
                         <div class="form-group"><label class="col-sm-3 control-label">登陆用户：</label>
                             <div class="col-sm-5">
-                                <input type="text" name="username" class="form-control"  value="root" placeholder="请输入登陆用户"><span
+                                <input type="text" name="username" class="form-control" value="root"
+                                       placeholder="请输入登陆用户"><span
                                     class="help-block m-b-none"></span>
 
                             </div>
@@ -214,7 +230,7 @@
                     <span id="error1" style="color:red;"></span>
                 </div>
                 <form id="edit_form" class="form-horizontal">
-                   <div class="modal-body">
+                    <div class="modal-body">
 
 
                         <div class="form-group"><input type="text" name="id" style="display:none"/></div>
@@ -232,30 +248,31 @@
 
                             </div>
                         </div>
-                    <div class="form-group"><label class="col-sm-3 control-label">ssh端口：</label>
+                        <div class="form-group"><label class="col-sm-3 control-label">ssh端口：</label>
                             <div class="col-sm-5">
                                 <input type="text" name="port" class="form-control" placeholder=""> <span
                                     class="help-block m-b-none"></span>
 
                             </div>
                         </div>
-                                        <div class="form-group"><label class="col-sm-3 control-label">用户：</label>
+                        <div class="form-group"><label class="col-sm-3 control-label">用户：</label>
                             <div class="col-sm-5">
                                 <input type="text" name="username" class="form-control" placeholder=""> <span
                                     class="help-block m-b-none"></span>
 
                             </div>
-                        </div> <div class="form-group"><label class="col-sm-3 control-label">密码：</label>
+                        </div>
+                        <div class="form-group"><label class="col-sm-3 control-label">密码：</label>
                             <div class="col-sm-5">
-                                <input type="password"  name="password" id="host_password"   class="form-control" placeholder=""> <span
+                                <input type="password" name="password" id="host_password" class="form-control"
+                                       placeholder=""> <span
                                     class="help-block m-b-none"></span>
 
                             </div>
                         </div>
 
 
-
-                                <div class="form-group">
+                        <div class="form-group">
                             <label class="col-sm-3 control-label">机房：</label>
                             <div class="col-sm-9">
                                 <select name="jifang_id">
@@ -289,7 +306,7 @@
                             </div>
                         </div>
 
-                    <div class="form-group"><label class="col-sm-3 control-label">SN：</label>
+                        <div class="form-group"><label class="col-sm-3 control-label">SN：</label>
                             <div class="col-sm-5">
                                 <input type="text" name="sn" class="form-control" placeholder="请输入"> <span
                                     class="help-block m-b-none"></span>
@@ -297,7 +314,7 @@
                             </div>
                         </div>
 
-                                            <div class="form-group"><label class="col-sm-3 control-label">CPU：</label>
+                        <div class="form-group"><label class="col-sm-3 control-label">CPU：</label>
                             <div class="col-sm-5">
                                 <input type="text" name="cpu_core" class="form-control" placeholder="请输入CPU"> <span
                                     class="help-block m-b-none"></span>
@@ -306,16 +323,16 @@
                         </div>
 
 
-                    <div class="form-group"><label class="col-sm-3 control-label">型号：</label>
+                        <div class="form-group"><label class="col-sm-3 control-label">型号：</label>
                             <div class="col-sm-5">
-                                <input type="text"  name="model_name"  class="form-control" placeholder="请输入型号"> <span
+                                <input type="text" name="model_name" class="form-control" placeholder="请输入型号"> <span
                                     class="help-block m-b-none"></span>
 
                             </div>
                         </div>
 
 
-                                                                <div class="form-group"><label class="col-sm-3 control-label">备注：</label>
+                        <div class="form-group"><label class="col-sm-3 control-label">备注：</label>
                             <div class="col-sm-5">
                                 <input type="text" name="beizhu" class="form-control" placeholder="请输入"> <span
                                     class="help-block m-b-none"></span>
@@ -351,7 +368,6 @@
                     <div class="modal-body">
 
 
-
                         <div class="form-group"><label class="col-sm-3 control-label">主机名：</label>
                             <div class="col-sm-5">
                                 <input type="text" name="hostname" class="form-control" placeholder="请输入主机"> <span
@@ -366,14 +382,14 @@
 
                             </div>
                         </div>
-                    <div class="form-group"><label class="col-sm-3 control-label">ssh端口：</label>
+                        <div class="form-group"><label class="col-sm-3 control-label">ssh端口：</label>
                             <div class="col-sm-5">
-                                <input type="text" name="port"  class="form-control" placeholder=""> <span
+                                <input type="text" name="port" class="form-control" placeholder=""> <span
                                     class="help-block m-b-none"></span>
 
                             </div>
                         </div>
-                                        <div class="form-group"><label class="col-sm-3 control-label">用户：</label>
+                        <div class="form-group"><label class="col-sm-3 control-label">用户：</label>
                             <div class="col-sm-5">
                                 <input type="text" name="username" class="form-control" placeholder=""> <span
                                     class="help-block m-b-none"></span>
@@ -382,7 +398,7 @@
                         </div>
 
 
-                                <div class="form-group">
+                        <div class="form-group">
                             <label class="col-sm-3 control-label">机房：</label>
                             <div class="col-sm-9">
                                 <select name="jifang_id">
@@ -416,7 +432,7 @@
                             </div>
                         </div>
 
-                    <div class="form-group"><label class="col-sm-3 control-label">SN：</label>
+                        <div class="form-group"><label class="col-sm-3 control-label">SN：</label>
                             <div class="col-sm-5">
                                 <input type="text" name="sn" class="form-control" placeholder="请输入SN"> <span
                                     class="help-block m-b-none"></span>
@@ -424,14 +440,14 @@
                             </div>
                         </div>
 
-                                            <div class="form-group"><label class="col-sm-3 control-label">CPU：</label>
+                        <div class="form-group"><label class="col-sm-3 control-label">CPU：</label>
                             <div class="col-sm-5">
                                 <input type="text" name="cpu_core" class="form-control" placeholder="请输入CPU"> <span
                                     class="help-block m-b-none"></span>
 
                             </div>
                         </div>
-                          <div class="form-group"><label class="col-sm-3 control-label">型号：</label>
+                        <div class="form-group"><label class="col-sm-3 control-label">型号：</label>
                             <div class="col-sm-5">
                                 <input type="text" name="model_name" class="form-control" placeholder="请输入型号"> <span
                                     class="help-block m-b-none"></span>
@@ -440,7 +456,7 @@
                         </div>
 
 
-                                                                <div class="form-group"><label class="col-sm-3 control-label">备注：</label>
+                        <div class="form-group"><label class="col-sm-3 control-label">备注：</label>
                             <div class="col-sm-5">
                                 <input type="text" name="beizhu" class="form-control" placeholder="请输入备注"> <span
                                     class="help-block m-b-none"></span>
@@ -449,8 +465,6 @@
                         </div>
 
                     </div>
-
-
 
 
                     <div class="modal-footer">
@@ -491,168 +505,218 @@
     </div>
 
 
+        <div class="modal inmodal" id="myModa6" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content animated fadeIn">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span
+                            aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <i class="fa fa-clock-o modal-icon"></i>
+                    <h4 class="modal-title">批量删除</h4>
+                    <span id="error2" style="color:red;"></span>
+                    <small></small>
+                </div>
+                <form id="del_form">
+                    <div class="modal-body">
+
+
+                        <p><strong>确定删除？</strong></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-white" data-dismiss="modal">关闭</button>
+                        <a id="hostall_del" class="btn btn-danger m-r-sm">批量删除</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
 {% endblock %}
 
 {% block js %}
 
-<script type="text/JavaScript">
-    $(function () {
-        $('#host_add').click(function () {
+    <script type="text/JavaScript">
+
+        $(function () {
+        $('.hostall_del').click(function () {
             $.ajax({
-                url: "/host/hostadd",
+                url: "/jigui/jigui-del.html",
                 type: 'POST',
-                {#                 data:{'hostname':$('#host').val(),  'ip':$('#ip').val(),  'osversion':$('#osversion').val(), 'memory':$('#memory').val(), 'disk':$('#disk').val(),'jifang_id':$('#jifang1').val()},#}
-                data: $('#add_form').serialize(),
-                success: function (data) {
-                    var obj = JSON.parse(data);
-                    if (obj.status) {
-                        location.reload()
-                    } else {
-                        $('#error').text(obj.error);
+                data: $('#del_form_hostall').serialize(),
+                 success: function (data) {
+                        var obj = JSON.parse(data);
+                        if (obj.status) {
+                            location.reload()
+                        }
                     }
-                }
 
             })
         })
-
-        $('.host_change').click(function () {
-
-            var id = $(this).parent().parent().attr('nid');
-            $.ajax({
-                url: "/host/hostpassword",
-                type: 'POST',
-                data: {'id': id,},
-                success: function (ret) {
-                    $('#edit_form').find('input[name="password"]').val(ret);
-                }
-            })
+    })
 
 
-            var jifang_id = $(this).parent().parent().attr('jifang_id');
-            var port = $(this).parent().parent().attr('port');
-            var hostname = $(this).parent().parent().attr('hostname');
-            var ip = $(this).parent().parent().attr('ip');
-            {#                var password = $(this).parent().parent().attr('password');#}
-            var osversion = $(this).parent().parent().attr('osversion');
-            var memory = $(this).parent().parent().attr('memory');
-            var disk = $(this).parent().parent().attr('disk');
-            var username = $(this).parent().parent().attr('username');
-            var sn = $(this).parent().parent().attr('sn');
-            var beizhu = $(this).parent().parent().attr('beizhu');
-            var cpu_core = $(this).parent().parent().attr('cpu_core');
-            var model_name = $(this).parent().parent().attr('model_name');
 
 
-            $('#edit_form').find('input[name="id"]').val(id);
-            $('#edit_form').find('select').val(jifang_id);
-            $('#edit_form').find('input[name="port"]').val(port);
-            $('#edit_form').find('input[name="hostname"]').val(hostname);
-            $('#edit_form').find('input[name="ip"]').val(ip);
-            $('#edit_form').find('input[name="osversion"]').val(osversion);
-            $('#edit_form').find('input[name="memory"]').val(memory);
-            $('#edit_form').find('input[name="disk"]').val(disk);
-            $('#edit_form').find('input[name="username"]').val(username);
-            $('#edit_form').find('input[name="sn"]').val(sn);
-            $('#edit_form').find('input[name="beizhu"]').val(beizhu);
-            $('#edit_form').find('input[name="cpu_core"]').val(cpu_core);
-            $('#edit_form').find('input[name="model_name"]').val(model_name);
-
-        })
-
-        $('.host_see').click(function () {
-
-            var jifang_id = $(this).parent().parent().attr('jifang_id');
-            var port = $(this).parent().parent().attr('port');
-            var hostname = $(this).parent().parent().attr('hostname');
-            var ip = $(this).parent().parent().attr('ip');
-            var osversion = $(this).parent().parent().attr('osversion');
-            var memory = $(this).parent().parent().attr('memory');
-            var disk = $(this).parent().parent().attr('disk');
-            var username = $(this).parent().parent().attr('username');
-            var sn = $(this).parent().parent().attr('sn');
-            var beizhu = $(this).parent().parent().attr('beizhu');
-            var cpu_core = $(this).parent().parent().attr('cpu_core');
-            var model_name = $(this).parent().parent().attr('model_name');
-
-
-            $('#see_form').find('select').val(jifang_id);
-            $('#see_form').find('input[name="port"]').val(port);
-            $('#see_form').find('input[name="hostname"]').val(hostname);
-            $('#see_form').find('input[name="ip"]').val(ip);
-            $('#see_form').find('input[name="osversion"]').val(osversion);
-            $('#see_form').find('input[name="memory"]').val(memory);
-            $('#see_form').find('input[name="disk"]').val(disk);
-            $('#see_form').find('input[name="username"]').val(username);
-            $('#see_form').find('input[name="sn"]').val(sn);
-            $('#see_form').find('input[name="beizhu"]').val(beizhu);
-            $('#see_form').find('input[name="cpu_core"]').val(cpu_core);
-            $('#see_form').find('input[name="model_name"]').val(model_name);
-
-
-        })
-
-        $('#host_change').click(function () {
-            $.ajax({
-                url: "/host/hostchange",
-                type: 'POST',
-                data: $('#edit_form').serialize(),
-                success: function (data) {
-                    var obj = JSON.parse(data);
-                    if (obj.status) {
-                        location.reload()
-                    } else {
-                        $('#error1').text(obj.error);
+        $(function () {
+            $('#host_add').click(function () {
+                $.ajax({
+                    url: "/host/hostadd",
+                    type: 'POST',
+                    {#                 data:{'hostname':$('#host').val(),  'ip':$('#ip').val(),  'osversion':$('#osversion').val(), 'memory':$('#memory').val(), 'disk':$('#disk').val(),'jifang_id':$('#jifang1').val()},#}
+                    data: $('#add_form').serialize(),
+                    success: function (data) {
+                        var obj = JSON.parse(data);
+                        if (obj.status) {
+                            location.reload()
+                        } else {
+                            $('#error').text(obj.error);
+                        }
                     }
-                }
 
+                })
             })
-        })
 
+            $('.host_change').click(function () {
 
-        $('.host_del').click(function () {
-            var id = $(this).parent().parent().attr('nid');
-            var hostname = $(this).parent().parent().attr('hostname');
-            $('#del_form').find('input[name="id"]').val(id);
-            $('#del_form').find('input[name="hostname"]').val(hostname);
-        })
-
-
-        $('#host_del').click(function () {
-            $.ajax({
-                url: "/host/hostdel",
-                type: 'POST',
-                data: $('#del_form').serialize(),
-                success: function (data) {
-                    var obj = JSON.parse(data);
-                    if (obj.status) {
-                        location.reload()
-                    } else {
-                        $('#error2').text(obj.error);
+                var id = $(this).parent().parent().attr('nid');
+                $.ajax({
+                    url: "/host/hostpassword",
+                    type: 'POST',
+                    data: {'id': id,},
+                    success: function (ret) {
+                        $('#edit_form').find('input[name="password"]').val(ret);
                     }
-                }
+                })
+
+
+                var jifang_id = $(this).parent().parent().attr('jifang_id');
+                var port = $(this).parent().parent().attr('port');
+                var hostname = $(this).parent().parent().attr('hostname');
+                var ip = $(this).parent().parent().attr('ip');
+                {#                var password = $(this).parent().parent().attr('password');#}
+                var osversion = $(this).parent().parent().attr('osversion');
+                var memory = $(this).parent().parent().attr('memory');
+                var disk = $(this).parent().parent().attr('disk');
+                var username = $(this).parent().parent().attr('username');
+                var sn = $(this).parent().parent().attr('sn');
+                var beizhu = $(this).parent().parent().attr('beizhu');
+                var cpu_core = $(this).parent().parent().attr('cpu_core');
+                var model_name = $(this).parent().parent().attr('model_name');
+
+
+                $('#edit_form').find('input[name="id"]').val(id);
+                $('#edit_form').find('select').val(jifang_id);
+                $('#edit_form').find('input[name="port"]').val(port);
+                $('#edit_form').find('input[name="hostname"]').val(hostname);
+                $('#edit_form').find('input[name="ip"]').val(ip);
+                $('#edit_form').find('input[name="osversion"]').val(osversion);
+                $('#edit_form').find('input[name="memory"]').val(memory);
+                $('#edit_form').find('input[name="disk"]').val(disk);
+                $('#edit_form').find('input[name="username"]').val(username);
+                $('#edit_form').find('input[name="sn"]').val(sn);
+                $('#edit_form').find('input[name="beizhu"]').val(beizhu);
+                $('#edit_form').find('input[name="cpu_core"]').val(cpu_core);
+                $('#edit_form').find('input[name="model_name"]').val(model_name);
 
             })
-        })
-        $('.host_update').click(function () {
-            var id = $(this).parent().parent().attr('nid');
-            $.ajax({
-                url: "/host/hostupdate",
-                type: 'POST',
-                data: {'id': id,},
-                success: function (data) {
-                    var obj = JSON.parse(data);
-                    if (obj.status) {
-                        location.reload()
-                    } else {
-                        $('#update_error').text(obj.error);
+
+            $('.host_see').click(function () {
+
+                var jifang_id = $(this).parent().parent().attr('jifang_id');
+                var port = $(this).parent().parent().attr('port');
+                var hostname = $(this).parent().parent().attr('hostname');
+                var ip = $(this).parent().parent().attr('ip');
+                var osversion = $(this).parent().parent().attr('osversion');
+                var memory = $(this).parent().parent().attr('memory');
+                var disk = $(this).parent().parent().attr('disk');
+                var username = $(this).parent().parent().attr('username');
+                var sn = $(this).parent().parent().attr('sn');
+                var beizhu = $(this).parent().parent().attr('beizhu');
+                var cpu_core = $(this).parent().parent().attr('cpu_core');
+                var model_name = $(this).parent().parent().attr('model_name');
+
+
+                $('#see_form').find('select').val(jifang_id);
+                $('#see_form').find('input[name="port"]').val(port);
+                $('#see_form').find('input[name="hostname"]').val(hostname);
+                $('#see_form').find('input[name="ip"]').val(ip);
+                $('#see_form').find('input[name="osversion"]').val(osversion);
+                $('#see_form').find('input[name="memory"]').val(memory);
+                $('#see_form').find('input[name="disk"]').val(disk);
+                $('#see_form').find('input[name="username"]').val(username);
+                $('#see_form').find('input[name="sn"]').val(sn);
+                $('#see_form').find('input[name="beizhu"]').val(beizhu);
+                $('#see_form').find('input[name="cpu_core"]').val(cpu_core);
+                $('#see_form').find('input[name="model_name"]').val(model_name);
+
+
+            })
+
+            $('#host_change').click(function () {
+                $.ajax({
+                    url: "/host/hostchange",
+                    type: 'POST',
+                    data: $('#edit_form').serialize(),
+                    success: function (data) {
+                        var obj = JSON.parse(data);
+                        if (obj.status) {
+                            location.reload()
+                        } else {
+                            $('#error1').text(obj.error);
+                        }
                     }
-                }
 
+                })
             })
-        })
 
 
-    });
-</script>
+            $('.host_del').click(function () {
+                var id = $(this).parent().parent().attr('nid');
+                var hostname = $(this).parent().parent().attr('hostname');
+                $('#del_form').find('input[name="id"]').val(id);
+                $('#del_form').find('input[name="hostname"]').val(hostname);
+            })
+
+
+            $('#host_del').click(function () {
+                $.ajax({
+                    url: "/host/hostdel",
+                    type: 'POST',
+                    data: $('#del_form').serialize(),
+                    success: function (data) {
+                        var obj = JSON.parse(data);
+                        if (obj.status) {
+                            location.reload()
+                        } else {
+                            $('#error2').text(obj.error);
+                        }
+                    }
+
+                })
+            })
+
+
+            $('.host_update').click(function () {
+                var id = $(this).parent().parent().attr('nid');
+                $.ajax({
+                    url: "/host/hostupdate",
+                    type: 'POST',
+                    data: {'id': id,},
+                    success: function (data) {
+                        var obj = JSON.parse(data);
+                        if (obj.status) {
+                            location.reload()
+                        } else {
+                            $('#update_error').text(obj.error);
+                        }
+                    }
+
+                })
+            })
+
+
+        });
+    </script>
 
 {% endblock %}
