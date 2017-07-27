@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.conf.urls import url
-from hostinfo.views import host, cmd, host_add, host_change, host_del,yml,history,hostupdate,host_change_password
+from hostinfo.views import host, cmd, host_add, host_change, host_del,yml,history,hostupdate,host_change_password,hostall_del
 urlpatterns = [
     url(r'^host.html$', host,name="host"),
     url(r'^yml.html$', yml,name="yml"),
@@ -25,5 +25,6 @@ urlpatterns = [
     url(r'^hostchange$', host_change,name="host_change"),
     url(r'^hostdel$', host_del,name='host_del'),
     url(r'^hostupdate$', hostupdate,name="hostupdate"),
+    url(r'^hostall-del.html$', hostall_del),
 
 ]

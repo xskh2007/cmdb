@@ -269,3 +269,15 @@ def hostupdate(request):  ## 更新
             ret['status'] = False
             ret['error'] = '账号或密码错误'
         return HttpResponse(json.dumps(ret))
+    
+    
+    
+@login_required(login_url="/login.html")
+def hostall_del(request):
+    ret = {'status': True, 'error': None, 'data': None}
+    if  request.method == "POST":
+             ids = request.POST.getlist('id')
+             idstring = ','.join(ids)
+             Host.objects.extra(where=['id IN (' + idstring + ')']).delete()
+
+    return HttpResponse(json.dumps(ret))

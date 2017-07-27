@@ -57,6 +57,12 @@
 
                             <div class="table-responsive">
 
+
+                            {% if    perms.jigui.add_jiguiinfo  %}
+                <a type="button" class="btn btn-primary "   href="{%   url    'addx'   %}">
+                添加 {% endif %}
+            </a>
+
                             <a  class="btn btn-danger"    data-toggle="modal"
                                                     data-target="#myModa5"  >批量删除
                                             </a>
@@ -81,7 +87,7 @@
                                     {% for row  in jigui_list %}
 
                                         <tr class="gradeX">
-                                            <td > <input type="checkbox"    value="{{ row.id }}" name="id"   ></td>
+                                            <td > <input   type="checkbox"    value="{{ row.id }}" name="id"   ></td>
                                             <td><a href="/jigui/xiangxi-{{ row.id }}.html">{{ row.name }}</a></td>
                                             <td>{{ row.jq }}</td>
                                             <td>{{ row.zy }}</td>

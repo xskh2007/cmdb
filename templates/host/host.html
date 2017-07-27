@@ -18,10 +18,7 @@
         </li>
         <li class="active">
             <strong>服务器</strong>
-            {% if     perms.hostinfo.add_host %}
-                <button type="button" class="btn btn-primary  " data-toggle="modal" data-target="#myModal">
-                添加 {% endif %}
-            </button>
+
         </li>
     </ol>
 {% endblock %}
@@ -59,27 +56,34 @@
 
                         <div class="table-responsive">
 
+                            {% if     perms.hostinfo.add_host %}
+                <button type="button" class="btn btn-primary  " data-toggle="modal" data-target="#myModal">
+                添加 {% endif %}
+            </button>
+
+
                         <a  class="btn btn-danger"    data-toggle="modal"
                                                     data-target="#myModa6"  >批量删除
                                             </a>
 
-                        <from  id="del_form_hostall">
 
+<form   id="del_form_hostall" class="form-horizontal  " >
                             <table class="table table-striped table-bordered table-hover dataTables-example"
                                    style="word-break:break-all; word-wrap:break-word;">
                                 <thead>
                                 <tr>
-                                      <th width="20"> <input  type="checkbox"    id="CheckedAll"></th>
+                                    <th width="20"> <input  type="checkbox"    id="CheckedAll"></th>
                                     <th>主机名</th>
                                     <th>IP</th>
                                     <th>版本</th>
                                     <th>内存</th>
                                     <th>硬盘</th>
                                     <th>机房</th>
-                                    <th>变更 &nbsp;&nbsp;&nbsp;&nbsp;<span id="update_error" style="color:red;"></span>
+                                    <th>变更 <span id="update_error" style="color:red;"></span>
                                     </th>
                                 </tr>
                                 </thead>
+
                                 <tbody>
                                 {% for row  in host_list %}
 
@@ -89,7 +93,8 @@
                                         beizhu="{{ row.beizhu }}" username="{{ row.username }}" port="{{ row.port }}"
                                         cpu_core="{{ row.cpu_core }}" model_name="{{ row.model_name }}"
                                         beizhu="{{ row.beizhu }}" >
-                                     <td > <input type="checkbox"    value="{{ row.id }}" name="id"   ></td>
+
+                                       <td > <input  type="checkbox"    value="{{ row.id }}"    name="id"   ></td>
                                         <td>{{ row.hostname }}</td>
                                         <td>{{ row.ip }}</td>
                                         <td>{{ row.osversion }}</td>
@@ -136,7 +141,7 @@
 {#                                </tfoot>#}
                             </table>
 
-</from>
+     </form>
                         </div>
 
                     </div>
@@ -524,7 +529,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-white" data-dismiss="modal">关闭</button>
-                        <a id="hostall_del" class="btn btn-danger m-r-sm">批量删除</a>
+                        <a  class="btn btn-danger m-r-sm  hostall_del"> 批量删除</a>
                     </div>
                 </form>
             </div>
@@ -539,20 +544,20 @@
     <script type="text/JavaScript">
 
         $(function () {
-        $('.hostall_del').click(function () {
-            $.ajax({
-                url: "/jigui/jigui-del.html",
-                type: 'POST',
-                data: $('#del_form_hostall').serialize(),
-                 success: function (data) {
-                        var obj = JSON.parse(data);
-                        if (obj.status) {
-                            location.reload()
+            $('.hostall_del').click(function () {
+                $.ajax({
+                    url: "/host/hostall-del.html",
+                    type: 'POST',
+                    data: $('#del_form_hostall').serialize(),
+                     success: function (data) {
+                            var obj = JSON.parse(data);
+                            if (obj.status) {
+                                location.reload()
+                            }
                         }
-                    }
 
+                })
             })
-        })
     })
 
 
